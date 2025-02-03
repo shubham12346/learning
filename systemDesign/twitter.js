@@ -50,6 +50,36 @@ class Twitter {
     console.log("User followee List :", this.followees.get(userId));
     console.log("***********_____________________********************");
   }
+
+  createPost(userId, content) {
+    if (!this.users.get(userId)) {
+      console.error("Not a valid user ");
+    }
+
+    let newTweet = {
+      tweetId: new Date().getTime(),
+      userId,
+      likes: new Set(),
+      comments: [],
+      content,
+    };
+
+    this.posts.push(newTweet);
+    this.users.get(userId).posts.push(newTweet);
+  }
+
+  likeTweet(userId, tweetId) {
+    if (!this.checkUser(userId)) return;
+
+    const tweet = this.posts.find((t) => t.tweetId === tweetId);
+    tweet.likes.add(userId);
+  }
+
+  checkUser(userId) {
+    const checkUser = this.users.get(userId);
+    console.log("Not a valid user");
+    return checkUser;
+  }
 }
 
 let shubh = new Twitter();
@@ -57,11 +87,19 @@ shubh.createUser("shubham");
 shubh.createUser("satish");
 shubh.follow("shubham", "satish");
 shubh.showFollowerandFolloweeList("shubham");
-shubh.showFollowerandFolloweeList("satish");
-shubh.unfollow("shubham", "satish");
+shubh.createPost("shubham", "hello this is my first tweet");
+
+const tweetId = shubh.posts[0].tweetId;
+shubh.likeTweet("shubham", tweetId);
 shubh.showFollowerandFolloweeList("shubham");
 
-shubh.follow("satish", "shubham");
+console.log("Likes Set:", shubh.posts[0].likes);
 
-shubh.showFollowerandFolloweeList("shubham");
-shubh.showFollowerandFolloweeList("satish");
+// shubh.showFollowerandFolloweeList("satish");
+// shubh.unfollow("shubham", "satish");
+// shubh.showFollowerandFolloweeList("shubham");
+
+// shubh.follow("satish", "shubham");
+
+// shubh.showFollowerandFolloweeList("shubham");
+// shubh.showFollowerandFolloweeList("satish");
