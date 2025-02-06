@@ -70,4 +70,27 @@ function deepFlattening(nums) {
   return ansArray;
 }
 
+//
+
+function deepFlatteningStack(input) {
+  let ansArray = [];
+  let stack = [input]; // Using a stack for iterative processing
+
+  while (stack.length > 0) {
+    let value = stack.pop(); // Take the last element from the stack
+
+    if (Array.isArray(value)) {
+      // If it's an array, push all elements back into the stack (process later)
+      stack.push(...value);
+    } else if (typeof value === "object" && value !== null) {
+      // If it's an object, push all values into the stack
+      stack.push(...Object.values(value));
+    } else {
+      // If it's a primitive, store it in ansArray
+      ansArray.push(value);
+    }
+  }
+
+  return ansArray.reverse();
+}
 deepFlattening(input);
