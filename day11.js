@@ -22,7 +22,7 @@ const promiseAny = (promises) => {
           errorCount++;
           error.push(err);
           if (errorCount === promises.length) {
-            reject(error);
+            reject(new AggregateError("All Promises were rejected", error));
           }
         });
     }
