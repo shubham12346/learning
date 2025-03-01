@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .section {
+        margin: 10px;
+      }
+      .usingFlexParent {
+        display: flex;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .usingFlexChild {
+        background-color: green;
+        height: 50px;
+        width: 50px;
+      }
+      .usingGridParent {
+        display: grid;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        place-items: center;
+        margin-bottom: 20px;
+      }
+      .usingGridChild {
+        background-color: green;
+        height: 50px;
+        width: 50px;
+      }
+      .usingPositionParent {
+        position: relative;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      .usingPositionChild {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: greenyellow;
+        transform: translate(-50%, -50%);
+      }
+      .usingLineHeightParent {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .usingLineHeightChild {
+        background-color: green;
+        line-height: 100px;
+        margin-bottom: 20px;
+      }
+      .usingMarginParent {
+        margin-top: 20px;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      .usingMarginChild {
+        background-color: green;
+        width: 50%; /* Specify a width */
+        height: 50%; /* Optional */
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="usingFlexParent">
+        <div class="usingFlexChild">way1 using flex</div>
+      </div>
+      <div class="usingGridParent">
+        <div class="usingGridChild">way2 using Grid</div>
+      </div>
+      <div class="usingPositionParent">
+        <div class="usingPositionChild">
+          way3 using position relative and absolute
+        </div>
+      </div>
+
+      <div class="usingLineHeightParent">
+        <div class="usingLineHeightChild">
+          way4 using text and line height property
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="usingMarginParent">
+        <div class="usingMarginChild">way 5 using margin</div>
+      </div>
+      <div class="usingInline">
+        <div class="usingMarginChild">way 5 using margin</div>
+      </div>
+    </section>
+  </body>
+</html>
