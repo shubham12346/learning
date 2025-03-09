@@ -93,3 +93,37 @@ console.log(stringfy2([1, "hello", true, null, { a: 5 }]));
 console.log(stringfy2(null));
 console.log(stringfy2(undefined)); // should return undefined
 console.log(stringfy2({ key: undefined })); // should return "{}"
+
+class JSONstringify {
+  constructor() {}
+
+  stringify(value) {
+    if (value == null) return "null";
+    if (typeof value === "string") return `"${value}"`;
+    if (typeof value === "number" || typeof value === "boolean")
+      return `"${String(value)}"`;
+    if (value === undefined || typeof value === "function") return undefined;
+
+    if (Array.isArray(value)) {
+      return `[${value?.map((item) => this.stringify(item)).join(",")}]`;
+    }
+
+    if (typeof value === "object") {
+      let entries = Object.keys(value)
+        .filter(
+          (item) => value[item] != undefined || typeof value[item] != "function"
+        )
+        .map((item) => `"${item}":"${this.stringify(value[item])}"`);
+
+      return `{${entries.join(",")}}`;
+    }
+    return undefined;
+  }
+}
+
+const newJson = new JSONstringify();
+console.log("----------------------------");
+console.log(newJson.stringify([1, "hello", true, null, { a: 5 }]));
+console.log(newJson.stringify(null));
+console.log(newJson.stringify(undefined)); // should return undefined
+console.log(newJson.stringify({ key: undefined })); // should return "{}"
