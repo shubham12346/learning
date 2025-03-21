@@ -24,3 +24,20 @@
 // Javascript in our custom function.
 
 // Concept
+
+const getTypeOf = (value) => {
+  if (value === null) return "object";
+  if (value instanceof Number) return "number";
+  if (value instanceof String) return "string";
+  if (value instanceof Boolean) return "boolean";
+  if (value instanceof BigInt) return "bigint";
+  if (value instanceof Symbol) return "symbol";
+
+  if (Array.isArray(value)) return "array";
+
+  if (Object.prototype.toString.call(value) === `[object Function]`)
+    return "function";
+  if (Object.prototype.toString.call(value) === `[object Object]`)
+    return "object";
+  return "undefined";
+};
