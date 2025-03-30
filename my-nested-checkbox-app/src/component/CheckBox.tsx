@@ -51,7 +51,7 @@ const CheckBox = () => {
     const allChecked = node?.children?.every(
       (item) => newCheckedItems[item.id]
     );
-
+    console.log("node", allChecked);
     newCheckedItems[node.id] = allChecked;
   };
 
@@ -77,7 +77,7 @@ const CheckBox = () => {
           {node.label}
         </label>
         {node.children &&
-          node.children?.map((child) => renderCheckBox(child, parent))}
+          node.children?.map((child) => renderCheckBox(child, node))}
       </div>
     );
   };
