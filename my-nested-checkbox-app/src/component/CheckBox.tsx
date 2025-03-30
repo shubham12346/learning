@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import markdownContent from "../assets/checkBoxMardown";
 
 type Node = {
   id: number;
@@ -82,7 +84,16 @@ const CheckBox = () => {
     );
   };
 
-  return <>{data?.map((item) => renderCheckBox(item))}</>;
+  return (
+    <>
+      <div>
+        <div> {data?.map((item) => renderCheckBox(item))}</div>
+        <div>
+          <ReactMarkdown>{markdownContent}</ReactMarkdown>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default CheckBox;
