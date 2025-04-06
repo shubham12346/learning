@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { components } from "../constant";
-import Header from "./Header";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleClick = (path) => {
+  const handleClick = (path: string) => {
     navigate(path);
   };
   return (
