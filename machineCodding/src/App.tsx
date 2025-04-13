@@ -4,9 +4,10 @@ import CheckBox from "./component/CheckBox";
 import ListWithViisulation from "./component/ListWithViisulation";
 import { components } from "./constant";
 import Header from "./component/Header";
+import FileExplorer from "./component/FileExplorer";
 function App() {
   return (
-    <>
+    <div className="bg-gray-700 h-screen px-5 py-5">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -16,9 +17,10 @@ function App() {
             path={`${components[1].route}`}
             element={<ListWithViisulation />}
           />
+          <Route path={`${components[2].route}`} element={<FileExplorer />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

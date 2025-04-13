@@ -11,4 +11,10 @@ export const components = [
     algorithm: "DFS",
     route: "/listWithViisulation",
   },
+  {
+    id: 3,
+    title: "React File Explorer ",
+    algorithm: "initial",
+    route: "/fileExplorer",
+  },
 ];
