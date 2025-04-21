@@ -1,0 +1,161 @@
+.myDocsAccordionList {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.myDocsAccordionIcon {
+  .icon-dropdown {
+    color: $primaryColorPurple;
+    padding-top: 1px;
+    font-size: 25px;
+    &.icon-rotate-top {
+      transform: rotate(180deg);
+    }
+  }
+}
+.myDocWrapper {
+  .fileAttachment {
+    .browseFile {
+      .fileUploadContainer {
+        @include border-radius(10px);
+        background-color: #f5f7fd;
+        border: 1px dashed #b4b5c0;
+      }
+    }
+    .fileBox {
+      border-radius: 4px;
+      border: 2px solid #e9e9f8;
+      background: #fff;
+      //box-shadow: 0px 13px 10px 0px rgba(18, 20, 51, 0.04);
+    }
+  }
+
+  .sidePanel {
+    height: calc(100vh - 210px);
+    min-height: calc(100vh - 210px);
+    overflow: auto;
+    @include commonScrollBar;
+    .category {
+      cursor: pointer;
+      .categoryTitle {
+        font: normal 600 16px/24px $font-family-base;
+      }
+    }
+    .selectedCategory {
+      border-radius: 8px;
+      background-color: $card-bg-color;
+      .categoryTitle {
+        @extend .textweight;
+        color: $primaryColorPurple;
+      }
+    }
+    .eastIcon {
+      background-color: #e9e9f8;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      min-width: 18px;
+      cursor: pointer;
+      svg {
+        font-size: 12px;
+        color: $primaryColorPurple;
+      }
+    }
+  }
+
+  .filesContainerComponentWrapper {
+    height: calc(100vh - 210px);
+    min-height: calc(100vh - 210px);
+    overflow: auto;
+    @include commonScrollBar;
+    .fileHeadTextFont {
+      font: normal 600 24px/24px $font-family-base;
+    }
+    .documentNameFont {
+      font: normal 700 14px/20px $font-family-base;
+    }
+    .documentTypeFont {
+      font: normal 400 14px/18px $font-family-base;
+    }
+    .subCategoryHeadTitle {
+      font: normal 400 16px/24px $font-family-base;
+    }
+    .fileList {
+      max-height: 120px;
+      overflow: auto;
+      @include commonScrollBar;
+    }
+    .spinnerWrapper {
+      max-height: 100px;
+      height: 100px;
+    }
+    .marginRight {
+      margin-right: 20px;
+    }
+
+    .divider {
+      background-color: rgba(180, 181, 192, 0.5);
+    }
+  }
+  .uploadBtnContainer {
+    .MuiButton-root {
+      border-radius: 0;
+    }
+  }
+}
+
+.fileModalContent {
+  background: $loaderbgColor;
+  max-height: 600px;
+  min-height: 300px;
+
+  @extend .commonListScroll;
+}
+
+.green-color:before {
+  color: #219653;
+}
+
+//CSS for loader for showing regulation status
+.icon-status-loading {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+
+.icon-status-loading:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.icon-status-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #f3eefa 0deg,
+    #f3eefa 5deg,
+    /* Smooth start */ #8947c4 101deg,
+    #6c35a1 108deg,
+    #4e237e 115deg,
+    #31125f 126deg,
+    #31125f 355deg,
+    /* Main color extends to 355deg (about 70% of the circle) */ #4e237e 360deg
+      /* Smooth end */
+  );
+  mask: radial-gradient(transparent 45%, #000 50%);
+  -webkit-mask: radial-gradient(transparent 45%, #000 50%);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

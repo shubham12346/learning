@@ -1,0 +1,98 @@
+{
+  "permissions": [
+    {
+      "modulePageUrl": "dashboard",
+      "moduleName": "Dashboard",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "users",
+      "moduleName": "Users"
+    },
+    {
+      "modulePageUrl": "tasks",
+      "moduleName": "Tasks"
+    },
+    {
+      "modulePageUrl": "tasks:taskId",
+      "moduleName": "tasks  and task  view  with task id "
+    },
+    {
+      "modulePageUrl": "tasksedit:taskId",
+      "moduleName": "tasks  and task edit with task id  "
+    },
+    {
+      "modulePageUrl": "regulations",
+      "moduleName": "Regulations"
+    },
+    {
+      "modulePageUrl": "regulations:regId",
+      "moduleName": "Regulations RegId",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionId",
+      "moduleName": "Regulations RegId and Action Plan Id",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionIdtask:taskMode",
+      "moduleName": "Regulations RegId, Action Plan Id, Task",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionIdattachment",
+      "moduleName": "Regulations  , action plan attachments ",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulations:regIdregulation-policies",
+      "moduleName": "Regulations, Reg ID,Regulation Policy "
+    },
+    {
+      "modulePageUrl": "news",
+      "moduleName": "News",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "avery-ai",
+      "moduleName": "Avery Co-Pilot",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "setting",
+      "moduleName": "Setting",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "fines",
+      "moduleName": "Fines",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "reports",
+      "moduleName": "Reports",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "mydoc",
+      "moduleName": "My Docs",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "fusion-one",
+      "moduleName": "Fusion1",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulationsgapActionPlan",
+      "moduleName": "Gap Action plan",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulationsgapassessmentviewdetails:activityId",
+      "moduleName": "Gap Activity Details View",
+      "actions": []
+    }
+  ]
+}

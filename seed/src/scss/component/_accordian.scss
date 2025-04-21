@@ -1,0 +1,97 @@
+.MuiAccordion-root {
+  &.MuiAccordion-rounded {
+    border-radius: 10px;
+    border: 1px solid #e9e9f8;
+    background: $white;
+    .arrowBox {
+      width: 20px;
+      height: 20px;
+      @include border-radius(50%);
+      background-color: rgba(78, 39, 136, 0.2);
+      .icon-dropdown {
+        color: $primaryColorPurple;
+        padding-top: 1px;
+        font-size: 20px;
+        &.icon-rotate-top {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .MuiAccordionSummary-root {
+      padding: 14px 20px;
+      .MuiAccordionSummary-content {
+        margin: 0px;
+      }
+    }
+    .MuiTypography-subtitle1 {
+      letter-spacing: 0.32px;
+      color: #3f4159;
+    }
+    .MuiTypography-body1 {
+      letter-spacing: 0.16px;
+      color: #3f4159;
+      opacity: 0.9;
+    }
+    .MuiCollapse-root {
+      &.MuiCollapse-vertical {
+        direction: ltr;
+        padding: 0px 20px;
+        .MuiCollapse-wrapper {
+          @include border-radius(8px);
+          min-height: 244px;
+          height: 244px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          @include commonScrollBar;
+          background: #f5f7fd;
+          padding: 20px;
+          margin-bottom: 20px;
+          direction: ltr;
+        }
+
+        .activeAccordionItem {
+          .MuiTypography-subtitle2 {
+            @extend .textweight;
+            color: $accordionListActiveColor;
+          }
+          .dotshow {
+            background-color: $accordionListActiveColor;
+          }
+        }
+        .dotshow {
+          @include border-radius(50%);
+          background-color: $colorNeutralGrey07;
+          width: 6px;
+          min-width: 6px;
+          height: 6px;
+          min-height: 6px;
+        }
+        .exmptyBox {
+          height: 200px;
+        }
+        .accordionList {
+          &:hover {
+            .MuiTypography-subtitle2 {
+              @extend .textweight;
+              color: $accordionListActiveColor;
+            }
+            .dotshow {
+              background-color: $accordionListActiveColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.singleResultAccordionWrapper {
+  .MuiCollapse-root {
+    &.MuiCollapse-vertical {
+      .MuiCollapse-wrapper {
+        min-height: 65px !important;
+        height: 65px !important;
+      }
+    }
+  }
+}

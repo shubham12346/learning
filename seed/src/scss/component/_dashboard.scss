@@ -1,0 +1,110 @@
+.dashboard {
+  .filterGroup {
+    .filterButton {
+      border-color: #e9e9f8;
+    }
+  }
+  .filterSelect {
+    .selectformcontrol {
+      .MuiInputBase-root {
+        background-color: $white;
+        box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
+        border: 1px solid rgba(233, 233, 248, 1);
+        @include border-radius(8px);
+      }
+    }
+    .MuiTypography-body2 {
+      @extend .displayNone;
+    }
+
+    &.taskEnforcementView {
+      .MuiInputBase-root {
+        padding: 6px;
+        height: 36px;
+        .MuiSvgIcon-root {
+          top: 5px;
+        }
+      }
+    }
+    &.regDetails {
+      .MuiInputBase-root {
+        height: 44px;
+        min-width: 120px;
+        max-width: 200px;
+        @extend .text-ellipsis;
+        .MuiOutlinedInput-input {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .MuiSvgIcon-root {
+          top: 9px;
+          right: 9px;
+        }
+      }
+    }
+  }
+
+  //reguation card section
+  .regulationInnerCard {
+    .innerCardItem {
+      width: 100%;
+      height: 120px;
+      @include border-radius(8px);
+      background-color: #f5f7fd;
+      .subTextStyle {
+        color: $colorNeutralGrey08;
+      }
+      [class*='icon-'] {
+        color: rgba(63, 65, 89, 0.8);
+        font-size: 26px;
+      }
+    }
+  }
+
+  //Regulatory card section
+  .regulatoryInnerCard {
+    .innerCardItem {
+      width: 100%;
+      height: 83px;
+      @include border-radius(8px);
+      background-color: rgba(245, 247, 253, 1);
+      .subTextStyle {
+        color: $primaryTextColor;
+      }
+      [class*='icon-'] {
+        color: rgba(63, 65, 89, 0.8);
+        font-size: 24px;
+      }
+    }
+  }
+
+  //score
+  .currentScoreCollapseBtn {
+    width: 32px;
+    height: 32px;
+    top: 0px;
+    @include border-radius(8px);
+    background: #f1f3f8;
+    right: 0px;
+    [class*='icon-'] {
+      color: rgba(49, 18, 95, 1);
+      font-size: 20px;
+    }
+  }
+  .enforcementDate {
+    @include commonScrollBar;
+    overflow: auto;
+  }
+  .tabScroll {
+    .MuiTabs-root {
+      .MuiButtonBase-root {
+        &.Mui-disabled {
+          display: none;
+        }
+      }
+      .MuiTabs-scroller {
+        overflow: auto !important;
+      }
+    }
+  }
+}

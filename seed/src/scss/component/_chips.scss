@@ -1,0 +1,82 @@
+.MuiChip-root {
+  &.chip-status {
+    @include border-radius(6px);
+    border: 1px solid;
+    padding: 0px 8px;
+    .MuiChip-label {
+      font: normal 600 12px/22px $font-family-base;
+      letter-spacing: -0.25px;
+    }
+    &.MuiChip-colorSuccess {
+      .MuiChip-label {
+        color: $statusSuccess;
+      }
+      border-color: $statusSuccess;
+      background-color: rgba(34, 161, 39, 0.15);
+    }
+    &.MuiChip-colorWarning {
+      .MuiChip-label {
+        color: $statusWarning;
+      }
+      border-color: $statusWarning;
+      background-color: #fff0e5;
+    }
+    &.MuiChip-colorInfo {
+      .MuiChip-label {
+        color: $statusInfo;
+      }
+      border-color: $statusInfo;
+      background-color: #e6f4ff;
+    }
+    &.MuiChip-colorError {
+      .MuiChip-label {
+        color: $statusError;
+      }
+      border-color: $statusError;
+      background-color: rgba(255, 229, 231, 1);
+    }
+    //chips with complince task status
+    &.createdTask {
+      @extend .createdTask;
+      .MuiSvgIcon-root {
+        fill: $createdTaskColor;
+      }
+    }
+    &.inProgress {
+      @extend .inProgress;
+      .MuiSvgIcon-root {
+        fill: $inProgressColor;
+      }
+    }
+    &.pendingApproval {
+      @extend .pendingApproval;
+      .MuiSvgIcon-root {
+        fill: $pendingApprovalColor;
+      }
+    }
+    &.completedTask {
+      @extend .completedTask;
+      .MuiSvgIcon-root {
+        fill: $completedTaskColor;
+      }
+    }
+    &.deletedTask {
+      @extend .deletedTask;
+      .MuiSvgIcon-root {
+        fill: $deletedTaskColor;
+      }
+    }
+    &.overDue {
+      @extend .overDue;
+      .MuiSvgIcon-root {
+        fill: $deletedTaskColor;
+      }
+    }
+    &.pendingApprovalOverdue {
+      @extend .pendingApproval;
+      .MuiSvgIcon-root {
+        fill: $pendingApprovalColor;
+      }
+    }
+  }
+}

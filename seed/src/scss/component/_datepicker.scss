@@ -1,0 +1,216 @@
+.datePickerContainer {
+  @extend .p-relative;
+  .MuiFormControl-root {
+    width: 100%;
+  }
+  .icon-date-picker {
+    color: $iconDatePickerColor;
+    font-size: 22px;
+  }
+  .textFields {
+    .MuiInputBase-input,
+    .Mui-disabled {
+      &::placeholder {
+        color: $white;
+        -webkit-text-fill-color: $white;
+      }
+    }
+  }
+  .datePickerLabel {
+    font-size: 0.875rem;
+    top: 36px;
+    left: 25px;
+    color: #121433;
+    opacity: 0.7;
+    z-index: 1;
+    @extend .p-absolute;
+  }
+}
+
+//datePickerPopover
+.datePickerPopover {
+  .MuiPaper-root {
+    width: 502px;
+    height: 460px;
+    border-radius: 8px;
+    border: 1px solid $colorNeutralGrey03;
+    box-shadow: $datePickerBoxshadow;
+    .css-epd502 {
+      width: 502px;
+      max-height: 490px;
+    }
+    .MuiCalendarPicker-root {
+      padding: 30px;
+      width: 502px;
+      max-height: 490px;
+      .css-1dozdou {
+        padding: 0;
+        margin: 0px 0px 8px 0px;
+        max-height: 40px;
+        min-height: 40px;
+        .css-1nt9x7o {
+          font: normal 700 20px/28px $font-family-base;
+          .MuiSvgIcon-root {
+            fill: $loaderEndDot;
+          }
+        }
+        .css-k008qs {
+          .MuiButtonBase-root {
+            padding: 10px;
+            &:hover {
+              @include border-radius(6px);
+              background-color: $datePickerDateCellBgColor;
+            }
+            .MuiSvgIcon-root {
+              fill: $primaryColorPurple2;
+            }
+            &.Mui-disabled {
+              .MuiSvgIcon-root {
+                fill: $calendarTextDisabled;
+              }
+            }
+          }
+        }
+      }
+      .PrivatePickersFadeTransitionGroup-root {
+        @include commonScrollBar;
+        .css-1n2mv2k {
+          //week header
+          span.MuiTypography-root {
+            height: 57px;
+            width: 64px;
+            font: normal 700 14px/18px $font-family-base;
+            text-transform: inherit;
+            color: $dateTextColor;
+            &:nth-child(1) {
+              &::after {
+                content: 'un';
+                display: inline-block;
+              }
+            }
+            &:nth-child(2) {
+              &::after {
+                content: 'on';
+                display: inline-block;
+              }
+            }
+            &:nth-child(3) {
+              &::after {
+                content: 'ue';
+                display: inline-block;
+              }
+            }
+            &:nth-child(4) {
+              &::after {
+                content: 'ed';
+                display: inline-block;
+              }
+            }
+            &:nth-child(5) {
+              &::after {
+                content: 'hu';
+                display: inline-block;
+              }
+            }
+            &:nth-child(6) {
+              &::after {
+                content: 'ri';
+                display: inline-block;
+              }
+            }
+            &:nth-child(7) {
+              &::after {
+                content: 'at';
+                display: inline-block;
+              }
+            }
+          }
+        }
+        //day view
+        .PrivatePickersSlideTransition-root {
+          min-height: 316px;
+          @include commonScrollBar;
+          .MuiPickersDay-root {
+            width: 57px;
+            height: 57px;
+            font: normal 500 14px/18px $font-family-base;
+            color: $primaryTextColor;
+          }
+          .css-i6bazn {
+            .css-mvmu1r {
+              //date grid row/cell
+              margin: 0px;
+              &[role='row'] {
+                &:last-child {
+                  div[role='cell'] {
+                    border-bottom: 1px solid $calendarBorderColor !important;
+                  }
+                }
+                div[role='cell'] {
+                  &:has(.MuiPickersDay-today) {
+                    border: 1px solid $datePickerTodayBorderColor;
+                  }
+                  &:has(.Mui-selected) {
+                    background-color: $loaderEndDot;
+                    .MuiButtonBase-root {
+                      color: $white !important;
+                      background-color: $loaderEndDot;
+                    }
+                  }
+                  .MuiButtonBase-root {
+                    &.MuiPickersDay-today {
+                      @extend .textweight;
+                      color: $primaryColorPurple;
+                    }
+                    &.Mui-disabled {
+                      background-color: $dateDisabledBgColor;
+                      color: $calendarTextDisabled;
+                    }
+                  }
+                  &:first-child {
+                    border-left: 1px solid $calendarBorderColor !important;
+                  }
+                }
+              }
+              div {
+                border: 1px solid $calendarBorderColor;
+                border-left: 0px;
+                border-bottom: 0px;
+                .MuiButtonBase-root.MuiPickersDay-root {
+                  @include border-radius(0px);
+                  // margin: auto;
+                  &.Mui-selected {
+                    background-color: $loaderEndDot;
+                    color: $white;
+                  }
+                  &.MuiPickersDay-today {
+                    background-color: $datePickerDateCellBgColor;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //year selection
+        .MuiYearPicker-root {
+          margin: 0 0px;
+          .PrivatePickersYear-root {
+            .PrivatePickersYear-yearButton {
+              font: normal 400 14px/18px $font-family-base;
+              color: $primaryTextColor;
+              margin: 0px 0;
+              height: 64px;
+              width: 97px;
+              &.Mui-selected {
+                background-color: $loaderEndDot;
+                color: $white;
+                @include border-radius(0px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+//all varibles goes under this files
+$font-family-base: 'Inter';
+$font-family-icomoon: 'icomoon';
+
+$white: #fff;
+$borderColor: #ccc;
+$borderBgColor: #eeeeee;
+$backgroundColor: #f1f4f5;
+$scrollBarBgColor: rgba(105, 129, 155, 0.2);
+$calenderDisableBgColor: rgba(180, 181, 192, 0.1);
+
+//text colors
+$primaryColorPurple: #4e2788;
+$primaryColorPurple2: rgba(78, 39, 136, 1);
+$primaryTextColor: #121433;
+$colorNeutralGrey03: #e9e9f8;
+$colorNeutralGrey07: rgba(63, 65, 89, 0.8);
+$colorNeutralGrey06: rgba(180, 181, 192, 0.5);
+$colorNeutralGrey08: rgba(18, 20, 51, 0.9);
+$colorNeutralGrey02: rgba(18, 20, 51, 1);
+$colorAlertRed03: rgba(231, 58, 53, 1);
+$actionDiscardModelTitle: rgba(51, 51, 51, 1);
+$filterColor: rgba(18, 20, 51, 0.7);
+
+//icon color
+$iconColor: rgba(63, 65, 89, 1);
+
+//progress stats color
+$progressError: #e55957;
+$progressSuccess: #009f46;
+$progressWarning: #f6841b;
+$progressStrong: #ffc30b;
+
+//progress status bg color with opacity
+$progressErrorBg: rgba(229, 89, 87, 0.585);
+$progressSuccessBg: rgba(0, 159, 69, 0.486);
+$progressWarningBg: rgba(246, 133, 27, 0.545);
+$progressStrongBg: rgba(255, 194, 11, 0.495);
+$errorTextColor: #ff1943;
+
+$regulationBorderColor: rgb(181, 182, 191, 0.5);
+$tourGuideBtnBorderColor: rgba(209, 178, 255, 1);
+
+//btn with login
+$boxShadowBtn: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 2px 1px -1px rgba(108, 131, 142, 0.04);
+$multiselectCheckbox: #e9e9f8;
+
+$loaderEndDot: #4e2788;
+$loaderbgColor: #f1f3f8;
+$multiselectCheckbox: #e9e9f8;
+
+//card
+$card-box-shadow: rgba(18, 20, 51, 0.04);
+$card-box-border-color: rgba(200, 203, 208, 0.5);
+$card-bg-color: #f5f7fd;
+
+$bg-surface-color: #4e2788;
+//login bg image
+$login-card-box-bg-image-url: '../../assets/svg/BG_Weaves.svg';
+$password-info-text: rgba(63, 65, 89, 0.8);
+$top-nav-bar-icon-color: rgba(18, 20, 51, 1);
+
+//more info modal
+$closeIconPopupColor: #3f4159cc;
+$statusChipColor: #22a127;
+$statusChipBgColor: rgba(34, 161, 39, 0.15);
+$companyBtnborderColor: 1px solid #d2c3d6;
+
+//hr bg color
+$hr-bg-color: rgba(180, 181, 192, 0.5);
+
+//table
+$table-border-color: #d2c3d6;
+$menuItemBorders: #f3f3f3;
+$menuItemBorderShadow: 0px 12.5px 10.01px 0px rgba(25, 42, 75, 0.04);
+
+//tooltip
+$tooltip-bg-color: #121433;
+
+//calendar
+$calendarTextDisabled: #b4b5c0;
+
+//status color
+$statusSuccess: #22a127;
+$statusWarning: #eb6200;
+$statusError: #da1e28;
+
+//calenderWeekHeaderBackground color
+
+$calenderWeekHeaderBackground: rgba(78, 39, 136, 1);
+
+$statusInfo: #008cff;
+
+// accordion background color
+$accordianBgColor: rgba(245, 247, 253, 1);
+
+//accordion list
+$accordionListActiveColor: rgba(78, 39, 136, 1);
+$buttonShadowColor: rgba(127, 0, 255, 0.6);
+
+//dropdown bg color
+$dropdownBgColor: rgba(233, 233, 248, 0.4);
+
+//calendar
+$calendarBorderColor: rgba(180, 181, 192, 0.5);
+$iconDatePickerColor: rgba(49, 18, 95, 1);
+$datePickerBoxshadow: 0px 12.52155px 10.01724px 0px rgba(25, 42, 75, 0.04);
+$datePickerDateCellBgColor: rgba(233, 233, 248, 0.5);
+$dateTextColor: #3f4159;
+$datePickerTodayBorderColor: #bd91ff;
+$dateDisabledBgColor: rgba(180, 181, 192, 0.1);
+
+//compliance task status
+$createdTaskColor: #008cff;
+$inProgressColor: #df8500;
+$pendingApprovalColor: #eb6200;
+$completedTaskColor: #16a251;
+$overDueTaskColor: #da1e28;
+$deletedTaskColor: #813fe4;
+// regulation type tags colors
+$libraryTagColor: rgba(124, 131, 229, 1);
+$currentTagColor: rgba(50, 176, 178, 1);
+$proposedTagColor: rgba(70, 144, 220, 1);
+
+// risk level status color
+$highStatus: rgba(252, 135, 27, 1);
+$mediumStatus: rgba(252, 189, 27, 1);
+$lowStatus: rgba(39, 174, 96, 1);
+$undefinedTaskTag: rgba(180, 181, 192, 1);
+$chipStatusBorderColor: rgba(233, 233, 248, 1);
+
+//bg colors
+$createdTaskBgColor: #e6f4ff;
+$inProgressBgColor: #fff1dd;
+$pendingApprovalBgColor: #fff0e5;
+$completedTaskBgColor: #f2ffe8;
+$overDueTaskBgColor: #ffe5e7;
+$deletedTaskBgColor: #f4eaff;
+$selectBorderColor: rgba(49, 18, 95, 0.5);
+$accordionUpBgColor: rgba(229, 229, 239, 1);
+
+//news tag border color
+$cardTagBorderColor: #d2c3d6;
+$defaultBookmarkbg: rgba(217, 217, 217, 0.88);
+
+//date tag back color in model
+$cardDateTagBgColor: #e8faff;
+
+// selected backgrounf list item
+$selectedListBorder: #536fc0;
+$selectedListItemBackground: #f1f5ff;
+
+// For read only text background
+$inputReadOnlyBackground: rgba(225, 213, 227, 1);
+
+// background color
+$regulationTag: rgba(232, 250, 255, 1);
+$fineTag: rgba(255, 246, 232, 1);
+$enforcementTag: rgba(255, 232, 232, 1);

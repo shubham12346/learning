@@ -1,0 +1,218 @@
+.tableRowCellHeight {
+  max-height: 76px !important;
+  min-height: 76px !important;
+}
+
+.tablestyle {
+  position: relative;
+  height: auto;
+  z-index: 99;
+  width: 100%;
+  &.MuiCard-root {
+    border-radius: 16px !important;
+    border: 1px solid $colorNeutralGrey03;
+    box-shadow: none !important;
+  }
+  .table {
+    border: 0px;
+    .MuiDataGrid-row {
+      @extend .tableRowCellHeight;
+      .MuiDataGrid-cell {
+        @include font-custom(400, 1rem, 1.5rem);
+        @extend .tableRowCellHeight;
+      }
+    }
+
+    .MuiDataGrid-withBorderColor {
+      border-color: $colorNeutralGrey03;
+    }
+    .MuiDataGrid-columnHeaders {
+      @extend .tableRowCellHeight;
+      .MuiDataGrid-columnHeaderTitle {
+        align-items: center;
+        @include font-weight-bold;
+        color: $table-header;
+      }
+      &:hover {
+        .MuiDataGrid-columnSeparator {
+          opacity: 0 !important;
+        }
+      }
+    }
+    .MuiDataGrid-columnHeader:focus-within,
+    .MuiDataGrid-cell:focus-within {
+      outline: solid transparent 1px;
+    }
+    .MuiCheckbox-colorPrimary {
+      color: $table-checkbox-unchecked;
+      border-radius: 4px !important;
+      background-color: $table-checkbox-unchecked;
+      height: 21px;
+      width: 21px;
+      margin-left: 18px;
+      &.Mui-checked {
+        color: $bg-surface-color;
+      }
+    }
+
+    .PrivateSwitchBase-root {
+      & .Mui-checked {
+        .MuiCheckbox-colorPrimary {
+          color: $table-checkbox-checked;
+          border-radius: 1px;
+          margin-left: 18px;
+        }
+      }
+    }
+    .MuiDataGrid-cellCheckbox::after {
+      border-left: 5px solid $table-checkbox-checked;
+    }
+    .table-header {
+      border: 0px;
+    }
+    .MuiDataGrid-row:hover,
+    .MuiDataGrid-row.Mui-hovered,
+    .MuiDataGrid-row.Mui-selected {
+      background-color: $table-hover;
+    }
+    .more-info-btn {
+      @include border-radius(50%);
+      &:hover {
+        background-color: $colorNeutralGrey03;
+      }
+    }
+  }
+  .customTableFooter {
+    position: absolute;
+    box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.06),
+      0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+    z-index: 9999999;
+    bottom: 0;
+    background-color: $white;
+    width: 100%;
+  }
+}
+
+.table-page-dropdown {
+  height: 36px !important;
+  width: 70px !important;
+  padding: 0px;
+  background-color: $white !important;
+  border: 1px solid #e5e5ef !important;
+
+  .MuiSelect-select {
+    text-overflow: unset !important;
+    padding: 0.5px 5px !important;
+  }
+  .expandMoreIcon {
+    margin-left: -15px;
+  }
+}
+
+.pagination-class {
+  .MuiPaginationItem-root {
+    &.Mui-selected {
+      background-color: $pagination-selected-bd;
+      color: $pagination-font;
+    }
+    &.Mui-selected:hover {
+      background-color: $pagination-selected-bd;
+      color: $pagination-font;
+    }
+  }
+}
+
+.width-search-input-box {
+  min-width: 20rem;
+}
+
+//normal table css
+.customTable {
+  table {
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 90%;
+    border: $companyBtnborderColor;
+    background: $colorNeutralGrey03;
+    overflow: hidden;
+    @include border-radius(8px);
+  }
+  th {
+    text-align: left;
+    padding: 15px 30px;
+    border-bottom: 1px solid $table-border-color;
+    &:first-child {
+      border-right: 1px solid $table-border-color;
+    }
+  }
+  td {
+    &:first-child {
+      border-right: 1px solid $table-border-color;
+    }
+    text-align: left;
+    padding: 12px 30px;
+  }
+}
+.task {
+  white-space: initial !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 60px;
+}
+
+//table sortIcon icon using pure css
+.tableSortIcon {
+  .arrowUpDown {
+    &::before,
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      position: relative;
+      left: 1px;
+    }
+    &::before {
+      border-bottom: 7px solid #999999;
+      top: -1.0625rem;
+    }
+    &::after {
+      border-top: 7px solid #999999;
+      top: 1rem;
+      left: -0.8125rem;
+    }
+  }
+}
+
+.fineAmount.MuiDataGrid-columnHeader--sorted[aria-sort='descending']
+  .tableSortIcon
+  .arrowUpDown::after {
+  border-top: 7px solid rgba(63, 65, 89, 0.8);
+}
+
+.fineAmount.MuiDataGrid-columnHeader--sorted[aria-sort='ascending']
+  .tableSortIcon
+  .arrowUpDown::before {
+  border-bottom: 7px solid rgba(63, 65, 89, 0.8);
+}
+.fineAmount .MuiDataGrid-columnHeaderTitleContainer {
+  flex-direction: row !important;
+}
+.fineAmount.MuiDataGrid-cell {
+  justify-content: flex-start !important;
+}
+
+//sort icon for parter table
+.fineAmount {
+  &.recentOnboard {
+    &:hover {
+      .MuiDataGrid-iconButtonContainer {
+        display: none !important;
+      }
+    }
+  }
+}

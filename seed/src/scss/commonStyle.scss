@@ -1,0 +1,1060 @@
+@import './variables';
+@import './theme/light.scss';
+@import './mixins';
+@import './component/login';
+@import './component/header';
+@import './component/notifications';
+@import './component/userbox';
+@import './component/suspenseloader';
+@import './component/sidebar';
+@import './component/app';
+@import './component/onboarding';
+@import './component/loader';
+@import './component/card';
+@import './component/toast';
+@import './fontStyles.scss';
+@import './component/table';
+@import './component/tenants';
+@import './component/tooltip';
+@import './component/calender';
+@import './component/chips';
+@import './component/regulations';
+@import './component/accordian';
+@import './component/filterGroup';
+@import './component/chips';
+@import './component/linearProgressBar';
+@import './component/autocomplete';
+@import './component/datepicker';
+@import './component/tasklist';
+@import './component/statusColors';
+@import './component/task';
+@import './component/dashboard';
+@import './component/news';
+@import './component/setting';
+@import './component/charts';
+@import './component/fines';
+@import './component/averyAiChatBot';
+@import './component/reports';
+@import './component/mediaQuery';
+@import './component/files';
+@import './component/mydoc';
+@import './component/adminRegulation';
+@import './component/tourComponent';
+@import './component/gapAssessment';
+@import './component/dataCopilot.scss';
+
+//common classes goes here
+#root {
+  overflow: auto;
+  @include commonScrollBar;
+}
+
+body {
+  padding: 0 !important;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.cursorDisabled {
+  cursor: not-allowed;
+}
+
+.cursorDefault {
+  cursor: default !important;
+}
+
+.hr-line {
+  border: 1px solid $borderColor;
+}
+
+.hr-bottom-line {
+  border-bottom: 1px solid $regulationBorderColor;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: sticky;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-noWarp {
+  text-wrap: nowrap;
+}
+
+.text-ellipsis-line {
+  @include ellipseWithLine(1, 40px);
+}
+
+//multiple file upload icon size
+
+.text-center {
+  text-align: center;
+}
+
+//Text Transform
+.textUppercase {
+  text-transform: uppercase !important;
+}
+
+.textCapitalize {
+  text-transform: capitalize !important;
+}
+
+.textNone {
+  text-transform: none !important;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.displayHidden {
+  visibility: hidden;
+}
+
+//text align
+.flex-basic-center {
+  @include flex-basic-center;
+}
+
+.flex-column-center {
+  @include flex-column-center;
+}
+
+.flex-basic-start {
+  justify-content: start !important;
+  @include flex-basic-center;
+}
+
+.flex-basic-space-between {
+  justify-content: space-between !important;
+  @include flex-basic-center;
+}
+
+.flex-basic-space-around {
+  justify-content: space-around !important;
+  @include flex-basic-center;
+}
+
+.flex-basic-end {
+  justify-content: end !important;
+  @include flex-basic-center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-column-end {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-end;
+}
+
+.flex-column-start {
+  display: flex;
+  flex-direction: column !important;
+  align-items: start;
+  justify-content: start;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-basic-space-start {
+  display: flex;
+  align-items: start;
+  justify-content: space-between !important;
+}
+.flex-basic-even-space {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-start {
+  align-items: start !important;
+}
+
+.align-items-end {
+  align-items: end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.textDecorationNone {
+  text-decoration: none !important;
+}
+
+.textweight {
+  @include font-weight-bold;
+}
+
+.textsemiWeight {
+  @include font-weight-semibold;
+}
+
+.textWeightMedium {
+  @include font-weight-medium;
+}
+
+.textWeightRegular {
+  @include font-weight-regular;
+}
+
+.textalign {
+  text-align: center;
+}
+
+.textItalic {
+  font-style: italic !important;
+}
+.text-ellipsis-oneline {
+  @include ellipseWithLine(1, 20px);
+}
+
+//height
+.h-100 {
+  height: 100%;
+}
+
+.h-100-vh {
+  height: 100vh;
+}
+
+//height
+.w-100 {
+  width: 100%;
+}
+
+//width per clasess
+@for $i from 0 through 100 {
+  .w-#{$i} {
+    width: round(percentage($i/100));
+  }
+}
+
+@for $i from 0 through 100 {
+  .mt-#{$i} {
+    margin-top: #{($i/16)}rem !important;
+  }
+}
+
+@for $i from 0 through 100 {
+  .mr-#{$i} {
+    margin-right: #{($i/16)}rem !important;
+  }
+}
+
+@for $i from 0 through 100 {
+  .ml-#{$i} {
+    margin-left: #{($i/16)}rem !important;
+  }
+}
+
+@for $i from 0 through 100 {
+  .mb-#{$i} {
+    margin-bottom: #{($i/16)}rem !important;
+  }
+}
+
+@for $i from 0 through 100 {
+  .p-#{$i} {
+    padding: #{($i/16)}rem !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{($i/16)}rem !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{($i/16)}rem !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{($i/16)}rem !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{($i/16)}rem !important;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.m-width {
+  min-width: 350 !important;
+}
+
+.sidebarwrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.baselayout {
+  flex: 1;
+  height: 100%;
+}
+
+.overflow_auto {
+  overflow: auto;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.flex_1 {
+  flex: 1;
+}
+
+.overflow_x_hidden {
+  overflow-x: hidden;
+}
+
+.alignitem {
+  align-items: center;
+}
+
+.loginBox {
+  position: relative;
+
+  &::after {
+    height: 100%;
+    content: '';
+    position: absolute;
+    width: 1px;
+    right: 0px;
+    background-color: $borderBgColor;
+  }
+}
+
+.commonListScroll {
+  @include commonScrollBar;
+  overflow: auto;
+}
+
+//font text
+.text-font-24 {
+  font: normal 600 1.5rem/24px $font-family-base;
+  letter-spacing: 0.72px;
+}
+
+.text-font-12 {
+  font: normal 400 0.75rem/18px $font-family-base;
+}
+
+//icon rotate
+.icon-rotate-90 {
+  @include iconRotate(90deg);
+}
+.icon-rotate-180 {
+  @include iconRotate(180deg);
+}
+.icon-rotate-273 {
+  @include iconRotate(273deg);
+}
+.icon-rotate-240 {
+  @include iconRotate(240deg);
+}
+.icon-rotate-360 {
+  @include iconRotate(360deg);
+}
+
+//password strength meter
+.passStrengthWeak {
+  background-color: $progressErrorBg !important;
+
+  .MuiLinearProgress-bar1Determinate {
+    background-color: $progressError !important;
+  }
+}
+
+.passStrengthFair {
+  background-color: $progressWarningBg !important;
+
+  .MuiLinearProgress-bar1Determinate {
+    background-color: $progressWarning !important;
+  }
+}
+
+.passStrengthGood {
+  background-color: $progressStrongBg !important;
+
+  .MuiLinearProgress-bar1Determinate {
+    background-color: $progressStrong !important;
+  }
+}
+
+.passStrengthStrong {
+  background-color: $progressSuccessBg !important;
+
+  .MuiLinearProgress-bar1Determinate {
+    background-color: $progressSuccess !important;
+  }
+}
+
+.errorState {
+  color: $errorTextColor !important;
+  text-align: left;
+}
+
+.helpertext {
+  // color: $hr-bg-color !important;
+  text-align: left;
+}
+
+.formFieldErrorState {
+  @extend .errorState;
+  @include font-custom(500, '0.875rem', '18px');
+}
+
+.border-radius-8 {
+  border-radius: 8px;
+}
+
+//header text fixed
+.header-help {
+  right: 40px;
+  top: 38px;
+}
+
+//modal dailog style
+.customDailogStyle {
+  &.MuiDialog-root {
+    .MuiDialogTitle-root,
+    .MuiDialogActions-root,
+    .MuiDialogContent-root {
+      padding: 0px !important;
+      @include commonScrollBar;
+      overflow: auto;
+    }
+  }
+}
+
+//top nav bar style
+.topNavBar-icon {
+  text-decoration: none;
+  font-size: 24px;
+  color: $top-nav-bar-icon-color;
+}
+
+.topNavBarDivider {
+  width: 10px;
+  @extend .p-relative;
+
+  &::after {
+    content: '';
+    @extend .p-absolute;
+    height: 40px;
+    width: 2px;
+    top: -18px;
+    background-color: $card-box-border-color;
+  }
+}
+
+.topNavUserSection {
+  &.MuiButton-root {
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
+
+    .MuiSvgIcon-root {
+      color: $top-nav-bar-icon-color;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.font-16 {
+  @include font-custom(500, 1rem, 1.2rem);
+}
+
+.font-24 {
+  @include font-custom(500, 1.5rem, 1.5rem);
+}
+
+//more info drop
+.iconStyle {
+  font-size: 20px;
+  color: $iconColor;
+}
+
+//dropMenuView
+.dropMenuView {
+  .MuiMenu-paper {
+    border: 1px solid $card-box-border-color !important;
+    background: $white;
+    box-shadow: $menuItemBorderShadow;
+    ul.MuiMenu-list {
+      padding: 0px;
+      li {
+        border-bottom: 1px solid $menuItemBorders;
+        @include border-radius(0px);
+        margin: 0px;
+      }
+      hr.MuiDivider-fullWidth {
+        display: none;
+      }
+    }
+  }
+}
+
+//helpModalIcon
+.helpModalIcon {
+  font-size: 24px;
+  color: $colorNeutralGrey07;
+}
+
+.MuiDialogContent-root {
+  .MuiSelect-select {
+    &.MuiSelect-outlined {
+      &.MuiInputBase-input {
+        padding: 0.5px 14px !important;
+      }
+    }
+  }
+}
+
+//TODO
+.filterList {
+  .MuiFormControlLabel-root {
+    margin-left: 0px !important;
+    .MuiCheckboxCustomStyle {
+      color: $table-checkbox-unchecked;
+      @include border-radius(4px);
+      background-color: $table-checkbox-unchecked;
+      height: 21px;
+      width: 21px;
+      &.Mui-checked {
+        color: $bg-surface-color;
+      }
+    }
+  }
+}
+
+//readMoreText
+.readMoreText {
+  font: normal 700 14px/20px $font-family-base;
+  color: $primaryColorPurple;
+  letter-spacing: 0.28px;
+  padding-left: 2px;
+}
+
+//Error-text
+.error-text {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+//scroll for common use
+.commonScrollBar {
+  overflow: auto;
+  @include commonScrollBar;
+}
+
+//text-blu
+.text-blur {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+//custom Select as like button
+.customSelect {
+  line-height: 33px;
+  .selectformcontrol {
+    .MuiTypography-root,
+    .MuiFormHelperText-root {
+      @extend .displayNone;
+    }
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      padding: 0px;
+      height: 33px !important;
+      border-radius: 4px;
+      border: 1px solid;
+      font: normal 600 12px/22px $font-family-base;
+      letter-spacing: -0.25px;
+
+      .MuiSvgIcon-root {
+        top: 4px;
+      }
+      #customSelectControl {
+        padding: 6px 40px 6px 16px;
+        height: auto !important;
+        min-height: auto !important;
+      }
+      .MuiOutlinedInput-notchedOutline {
+        top: 0px !important;
+      }
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: transparent !important;
+        border-style: none !important;
+        border-width: 0px !important;
+      }
+    }
+  }
+  &.createdTask {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .createdTask;
+      .MuiSvgIcon-root {
+        fill: $createdTaskColor;
+      }
+    }
+  }
+  &.inProgress {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .inProgress;
+      .MuiSvgIcon-root {
+        fill: $inProgressColor;
+      }
+    }
+  }
+  &.pendingApproval {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .pendingApproval;
+      .MuiSvgIcon-root {
+        fill: $pendingApprovalColor;
+      }
+    }
+  }
+  &.completedTask {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .completedTask;
+      .MuiSvgIcon-root {
+        fill: $completedTaskColor;
+      }
+    }
+  }
+  &.deletedTask {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .deletedTask;
+      .MuiSvgIcon-root {
+        fill: $deletedTaskColor;
+      }
+    }
+  }
+  &.overDue {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .overDue;
+      .MuiSvgIcon-root {
+        fill: $overDueTaskColor;
+      }
+    }
+  }
+  &.pendingApprovalOverdue {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      @extend .pendingApproval;
+      .MuiSvgIcon-root {
+        fill: $pendingApprovalColor;
+      }
+    }
+  }
+}
+//
+.customRegulationTag {
+  @include border-radius(6px);
+  border: 1px solid;
+  padding: 0px 8px;
+  font: normal 600 12px/22px $font-family-base;
+  letter-spacing: -0.25px;
+}
+//select popover
+.MuiPopover-paper {
+  &.customSelect {
+    @extend .commonListScroll;
+    .MuiMenu-list {
+      padding: 0px;
+      .MuiMenuItem-root {
+        min-height: 46px;
+        @include border-radius(0px);
+        font: normal 500 14px/21px $font-family-base;
+        white-space: break-spaces;
+      }
+    }
+  }
+}
+
+.emptyTextField {
+  font: italic 400 16px/24px $font-family-base;
+  color: rgba(63, 65, 89, 0.8);
+  letter-spacing: 0.16px;
+}
+
+//container
+.MuiContainer-root {
+  &.MuiContainer-maxWidthXl {
+    padding: 0;
+  }
+}
+
+//customTextArea
+.customTextArea {
+  textarea {
+    font: normal 400 14px/18px $font-family-base;
+    padding: 15px 20px;
+    background-color: $card-bg-color;
+    @include border-radius(8px);
+    border: none;
+    outline: none;
+    resize: vertical;
+    &:focus {
+      border: 1px solid $primaryTextColor;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #121433;
+      opacity: 0.7;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #121433;
+      opacity: 0.7;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #121433;
+      opacity: 0.7;
+    }
+
+    &:-ms-input-placeholder {
+      color: #121433;
+      opacity: 0.7;
+    }
+    @extend .taskScroll;
+    resize: none;
+  }
+}
+//todo
+// ::-webkit-resizer {
+//   outline: 1px solid rgba(0, 0, 0, 0.2);
+// }
+
+.radioText {
+  .MuiFormGroup-root {
+    flex-wrap: nowrap !important;
+  }
+}
+//emptyAvatarBox
+.emptyAvatarBox {
+  width: 61px;
+  height: 61px;
+  min-width: 61px;
+  background-color: #fff5e6;
+  @include border-radius(50%);
+}
+
+.radioSection {
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+.Scrollbar {
+  @include commonScrollBar;
+}
+
+//termsofService
+
+.termsofService {
+  .MuiTypography-body1 {
+    &:hover {
+      // @extend .cursorPointer;
+      font-weight: 500;
+      color: $primaryColorPurple;
+    }
+  }
+}
+
+//commonColors
+.textPrimaryColor {
+  color: $primaryColorPurple;
+}
+
+.textWhiteColor {
+  color: $white;
+}
+.textCountColors {
+  color: rgba(63, 65, 89, 0.8);
+}
+
+//logout Options
+.MuiModal-root {
+  &.MuiPopover-root {
+    &.logOutButton {
+      .MuiPaper-root {
+        width: 180px;
+        min-width: 180px;
+        top: 80px !important;
+        @include border-radius(8px);
+        border: 1px solid rgba(200, 203, 208, 0.5);
+        background: $white;
+        box-shadow: 0px 12.52px 10.01px 0px rgba(25, 42, 75, 0.04);
+        .logoutDropBox {
+          .logoutDropBoxList {
+            font: normal 500 16px/24px $font-family-base;
+            color: #121433;
+            letter-spacing: 0.56px;
+            [class*='icon-'] {
+              font-size: 22px;
+              color: rgba(63, 65, 89, 1);
+            }
+            &:hover {
+              font-weight: 600;
+              cursor: pointer;
+              background: rgba(233, 233, 248, 0.5);
+              color: $primaryColorPurple;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.logoutBoxOnboarding {
+  right: 20px;
+  top: 17px;
+}
+
+//file width
+.fileNameWidth {
+  max-width: 250px;
+}
+
+//userNameWidth ellipsis
+.userNameWidth {
+  max-width: 200px;
+}
+
+//autoScrollFilterItem
+.autoScrollFilterItem {
+  overflow: auto;
+  cursor: pointer;
+  white-space: nowrap;
+  @include commonScrollBar;
+  &::-webkit-scrollbar {
+    height: 6px !important;
+    width: 6px !important;
+  }
+}
+
+.sidebarScroll {
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  cursor: pointer;
+  white-space: nowrap;
+  @include commonScrollBar;
+  &::-webkit-scrollbar {
+    height: 6px !important;
+    width: 6px !important;
+  }
+}
+.mainScroll {
+  @extend .sidebarScroll;
+  height: calc(100vh - 100px);
+}
+//endYearText radio button secttion
+.endYearText {
+  .MuiFormHelperText-root {
+    font: normal 500 14px/18px $font-family-base;
+    color: $colorAlertRed03;
+    letter-spacing: 0.14px;
+    margin-left: 0px;
+  }
+}
+
+//breadcrumbItem
+.breadcrumbItem {
+  .innerItem {
+    .item:last-child {
+      color: $primaryColorPurple;
+      font-weight: 700 !important;
+    }
+  }
+}
+
+//entity-add-org-button
+.entity-add-org-button {
+  @extend .p-absolute;
+  right: 0;
+  top: 40px;
+  z-index: 1;
+}
+
+//custom switch toggle
+.customToggle {
+  input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 26px;
+    background: rgb(147 147 147 / 60%);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: $white;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  input:checked + label {
+    background: $completedTaskColor;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 130px;
+  }
+}
+
+.setting {
+  .MuiBackdrop-root {
+    background-color: rgba(10, 13, 30, 0.5);
+  }
+}
+
+//file attchment
+.fileAttachment {
+  .browseFile {
+    .fileUploadContainer {
+      @include border-radius(10px);
+      background-color: #f5f7fd;
+      border: 1px dashed #b4b5c0;
+    }
+  }
+  .fileBox {
+    border-radius: 4px;
+    border: 2px solid #e9e9f8;
+    background: #fff;
+    box-shadow: 0px 13px 10px 0px rgba(18, 20, 51, 0.04);
+  }
+}
+
+// text
+.textWrap {
+  overflow-wrap: break-word;
+}
+.iconBg {
+  width: 32px;
+  height: 32px;
+  @include border-radius(8px);
+  border: 1px solid #e9e9f8;
+  @extend .cursorPointer;
+  background: #f1f3f8;
+}
+
+//multiSelect box height issue
+.selectformcontrol.multiSelectBox {
+  .MuiInputBase-formControl {
+    &.Mui-focused {
+      padding: 1px !important;
+    }
+    height: auto !important;
+    min-height: 48px !important;
+    padding: 0px !important;
+    .MuiSelect-multiple {
+      padding: 0px 14px !important;
+    }
+  }
+}
+
+.taskScroll {
+  @extend .commonScrollBar;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 13px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px $backgroundColor !important;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollBarBgColor !important;
+    border-radius: 10px;
+  }
+}
+
+.toastPosition {
+  top: 500px !important;
+  right: 400px !important;
+}
+.maxContent {
+  width: max-content;
+  height: 47px;
+}
+.syncedBox {
+  color: white;
+  background-color: $primaryColorPurple;
+  @include border-radius(5px);
+}
+.modalWidth {
+  min-width: '704px';
+}
+.breadcrumbArrowIcon {
+  color: $white;
+}
+.borderRight {
+  border-right: 1px solid $colorNeutralGrey03;
+}
+
+.moreInfoScroll {
+  height: calc(100vh - 350px);
+  @extend .taskScroll;
+}

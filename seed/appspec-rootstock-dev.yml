@@ -1,0 +1,16 @@
+version: 0.0
+
+os: linux 
+
+files:
+  - source: /
+    destination: /home/ubuntu/avery/rootstock-dev/frontend
+file_exists_behavior: OVERWRITE
+
+hooks:
+  BeforeInstall:
+    - location: deployment-scripts/rootstock-dev/BeforeInstallHook.sh
+      timeout: 300
+  AfterInstall:
+    - location: deployment-scripts/rootstock-dev/BeforeInstallHook.sh
+      timeout: 1000

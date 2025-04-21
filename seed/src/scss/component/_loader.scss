@@ -1,0 +1,115 @@
+@import './../variables';
+
+.progress-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.progress-outer {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #4e2788 0deg,
+    rgba(255, 255, 255, 0) 0.04deg,
+    #4e2788 360deg
+  );
+  animation: rotate 2s linear infinite;
+}
+
+.progress-inner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  width: 50.25px !important;
+  height: 50.25px;
+  border-radius: 50%;
+  background-color: $loaderbgColor;
+}
+.progress-end-dot {
+  position: absolute;
+  justify-content: flex-end;
+  top: 46%;
+  left: 91.6%;
+  align-items: end;
+  width: 5px !important;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $loaderEndDot;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//custom css loader
+.spinnerLoading {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, $primaryColorPurple 94%, #0000)
+      top/4px 4px no-repeat,
+    conic-gradient(#0000 30%, $primaryColorPurple);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 4px), #000 0);
+  animation: spinnerBox 1s infinite linear;
+}
+
+@keyframes spinnerBox {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+//dot dash loader
+.loaderBox {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 25%;
+  background-color: $primaryColorPurple;
+  color: $white;
+  .icon-averyAI {
+    font-size: 32px;
+  }
+}
+.dashLoader {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: $primaryColorPurple;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+}

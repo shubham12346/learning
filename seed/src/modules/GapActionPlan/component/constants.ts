@@ -1,0 +1,11 @@
+export const firmPolicy = 'firmPolicy';
+export const revisedPolicy = 'revisedPolicy';
+export const Undefined = 'Undefined';
+export const OverDue = 'Overdue';
+export const PendingApproval = 'Pending Approval (Overdue)';
+export const REVISED_POLICY_TITLE = 'Revised Policy';
+export const REGULATION = 'regulation';
+export const GAP_ANALYSIS = 'gap-analysis';
+export const EDIT = 'edit';
+export const MORE_INFO = 'view';
+export const ROLES = ['Administration Admin', 'Partner Admin'];

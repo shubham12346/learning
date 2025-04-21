@@ -1,0 +1,63 @@
+.loginWrapper {
+  .containerCenter {
+    @extend .flex-basic-center;
+    @extend .text-center;
+    min-height: calc(100vh - 66px);
+    @media (max-width: 960px) {
+      padding-top: 40px;
+    }
+  }
+
+  .loginWithGoogle {
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &.background-login-image {
+    width: 100%;
+    background-image: url($login-card-box-bg-image-url);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-width: 1920px) {
+      &.bg-position-lg {
+        background-position: right 120px !important;
+      }
+    }
+  }
+}
+
+//login css
+.loginForm {
+  .loginCardIcon {
+    @include border-radius(8px);
+    background: $white;
+    border: 1px solid rgba(180, 181, 192, 0.6);
+  }
+  .loginCardForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loginCardFooter {
+    border-top: 1px solid #e5e5ef;
+  }
+}
+
+//forgot password
+.forgotPasswordWrapper {
+  .containerCenter {
+    @extend .flex-basic-center;
+    min-height: calc(100vh - 77px);
+  }
+}
+
+.bgSurfaceColor {
+  color: $bg-surface-color !important;
+}
+.bg-password-not-active {
+  color: $password-info-text !important;
+}

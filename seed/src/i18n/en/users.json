@@ -1,0 +1,26 @@
+{
+  "userPageTitle": "Users",
+  "addNewUserBtn": "ADD NEW USER",
+  "modalTitle": "ADD NEW USER",
+  "modalBtnText": "Send Activation Link",
+  "userEmailIdError": "User email id already exists",
+  "emailInviteSentText": "Email invitation sent successfully",
+  "primaryAdmin": "Primary Admin",
+  "primaryAdminDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+  "secondaryAdmin": "Secondary Admin",
+  "groupAdmin": "Group Admin",
+  "admin": "Admin",
+  "user": "User",
+  "closeTitle": "close",
+  "table": {
+    "view": "View",
+    "perPage": "Per Page",
+    "delete": "Delete",
+    "edit": "Edit",
+    "moreInfo": "More Info"
+  },
+  "moreInfoModal": {
+    "userTitle": "USER INFO",
+    "resendInvite": "Resend Invite"
+  }
+}

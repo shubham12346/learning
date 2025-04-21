@@ -1,0 +1,235 @@
+@font-face {
+  font-family: $font-family-icomoon;
+  src: url('fonts-icons/icomoon.eot?35bp39');
+  src: url('fonts-icons/icomoon.eot?35bp39#iefix') format('embedded-opentype'),
+    url('fonts-icons/icomoon.ttf?35bp39') format('truetype'),
+    url('fonts-icons/icomoon.woff?35bp39') format('woff'),
+    url('fonts-icons/icomoon.svg?35bp39#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $font-family-icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//always add new icon in the top
+//always remove colors while adding new icons
+
+.icon-robot-happy-outline:before {
+  content: '\e93e';
+}
+.icon-ic_copy-2:before {
+  content: '\e939';
+  color: #3f4159;
+}
+.icon-ic_dislike:before {
+  content: '\e93a';
+  color: #3f4159;
+}
+.icon-ic_like:before {
+  content: '\e93c';
+  color: #3f4159;
+}
+
+.icon-Icon-Stroke:before {
+  content: '\e938';
+  color: #3f4159;
+}
+.icon-ic_not-selected-4:before {
+  content: '\e900';
+  color: #4e2788;
+}
+.icon-ic_check-selected-3:before {
+  content: '\e936';
+  color: #31125f;
+}
+.icon-ic_my-doc:before {
+  content: '\e937';
+}
+.icon-avery-policy:before {
+  content: '\e941';
+}
+.icon-firm-policy:before {
+  content: '\e93b';
+}
+.icon-gap-analysis:before {
+  content: '\e935';
+}
+.icon-ic_edit_chat:before {
+  content: '\e934';
+}
+.icon-task-menu:before {
+  content: '\e933';
+}
+.icon-weekly-digest-report:before {
+  content: '\e92f';
+}
+.icon-audit-trail-report:before {
+  content: '\e930';
+}
+.icon-message-sent:before {
+  content: '\e931';
+}
+.icon-logout:before {
+  content: '\e932';
+}
+.icon-averyAI:before {
+  content: '\e92e';
+}
+.icon-Send-1:before {
+  content: '\e92f';
+}
+.icon-regulation-newer:before {
+  content: '\e929';
+}
+.icon-tasks-inprogress:before {
+  content: '\e92a';
+}
+.icon-pending-approval:before {
+  content: '\e92b';
+}
+.icon-task-overdues:before {
+  content: '\e92c';
+}
+.icon-task-completed:before {
+  content: '\e92d';
+}
+.icon-ic_right-arrow:before {
+  content: '\e928';
+}
+.icon-ic_bookmark:before {
+  content: '\e91c';
+}
+.icon-ic_dashboard:before {
+  content: '\e91e';
+}
+.icon-ic_enforcement-actions:before {
+  content: '\e922';
+}
+.icon-ic_fines:before {
+  content: '\e923';
+}
+.icon-ic_news:before {
+  content: '\e924';
+}
+.icon-ic_proposed-regulation:before {
+  content: '\e925';
+}
+.icon-ic_changed-regulation:before {
+  content: '\e926';
+}
+.icon-ic_action-completed:before {
+  content: '\e927';
+}
+.icon-task-date:before {
+  content: '\e91a';
+}
+.icon-date-picker:before {
+  content: '\e91b';
+}
+.icon-plus:before {
+  content: '\e909';
+}
+.icon-dropdown:before {
+  content: '\e919';
+}
+.icon-regulation-new:before {
+  content: '\e90a';
+}
+.icon-source-link:before {
+  content: '\e90b';
+}
+.icon-date:before {
+  content: '\e90c';
+}
+.icon-history:before {
+  content: '\e90d';
+}
+.icon-folder:before {
+  content: '\e90e';
+}
+.icon-version:before {
+  content: '\e911';
+}
+.icon-share:before {
+  content: '\e912';
+}
+.icon-download:before {
+  content: '\e914';
+}
+.icon-close:before {
+  content: '\e915';
+}
+.icon-reset-filter:before {
+  content: '\e916';
+}
+.icon-collapse:before {
+  content: '\e917';
+}
+.icon-expand:before {
+  content: '\e918';
+}
+.icon-company:before {
+  content: '\e908';
+}
+.icon-resend:before {
+  content: '\e903';
+}
+.icon-trash:before {
+  content: '\e907';
+}
+.icon-edit:before {
+  content: '\e91f';
+}
+.icon-info:before {
+  content: '\e920';
+}
+.icon-search:before {
+  content: '\e921';
+}
+.icon-users:before {
+  content: '\e910';
+}
+.icon-settings:before {
+  content: '\e913';
+}
+.icon-task-1:before {
+  content: '\e91d';
+}
+.icon-eye-open:before {
+  content: '\e90f';
+}
+.icon-help:before {
+  content: '\e905';
+}
+.icon-notification:before {
+  content: '\e906';
+}
+.icon-task:before {
+  content: '\e900';
+}
+.icon-fines:before {
+  content: '\e901';
+}
+.icon-regulation:before {
+  content: '\e902';
+}
+.icon-reports:before {
+  content: '\e904';
+}
+.icon-ic_upload-policy:before {
+  content: '\e93d';
+}

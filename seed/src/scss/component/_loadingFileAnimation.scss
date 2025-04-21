@@ -1,0 +1,33 @@
+@import './../variables';
+
+.progressBarPercentage {
+  color: $primaryColorPurple;
+}
+
+.backgroundProgressBarPosition {
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 0;
+  color: $colorNeutralGrey06;
+}
+
+.fileAnimationPosition {
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  transform: translateY(8%);
+}
+
+.circularProgressBar_title {
+  color: $primaryTextColor;
+}
+
+.circularProgressBar_subTitle {
+  color: $closeIconPopupColor;
+}
+
+.circularProgressBar_titleContainer {
+  padding-bottom: 25px;
+}

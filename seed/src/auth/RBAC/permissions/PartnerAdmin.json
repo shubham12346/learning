@@ -1,0 +1,57 @@
+{
+  "permissions": [
+    {
+      "modulePageUrl": "dashboard",
+      "moduleName": "Dashboard",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "companies",
+      "moduleName": "Companies",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-companies",
+          "action": "Add Companies",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-companies",
+          "action": "Edit Companies",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-companies",
+          "action": "Delete Companies",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "setting",
+      "moduleName": "setting",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-settings",
+          "action": "Add Settings",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-settings",
+          "action": "Edit Settings",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-settings",
+          "action": "Delete Settings",
+          "roleIsActive": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+.averyAiChatBot {
+  position: relative;
+  .chatBotCard {
+    .emptyPlaceHolderHeight {
+      height: calc(100vh - 316px);
+    }
+    height: calc(100vh - 200px);
+    @extend .taskScroll;
+    .MuiFormControl-root {
+      width: 100%;
+      &.MuiTextField-root {
+        .MuiInputBase-root {
+          border: none;
+          padding: 32px 20px;
+          border-radius: 8px;
+          background-color: rgba(245, 247, 253, 1);
+          color: rgba(122, 125, 163, 0.8);
+          font: normal 600 16px/24px $font-family-base;
+          letter-spacing: 0.32px;
+          .MuiInputBase-input {
+            color: #121433;
+            &.Mui-disabled {
+              -webkit-text-fill-color: rgba(122, 125, 163, 0.8) !important;
+            }
+            &::placeholder {
+              font: normal 600 16px/24px $font-family-base;
+              color: #7a7da3;
+            }
+          }
+          .MuiInputAdornment-root {
+            .MuiButtonBase-root {
+              .icon-message-sent {
+                font-size: 24px;
+                color: $primaryColorPurple;
+              }
+              &.Mui-disabled {
+                .icon-message-sent {
+                  font-size: 24px;
+                  color: $calendarTextDisabled;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    //file attchment
+    .feedbackActioWrapper {
+      .iconHeightAndWidth {
+        font-size: 25px;
+        padding: 1px;
+      }
+      .selectedActions {
+        color: $primaryColorPurple !important;
+        background-color: $white !important;
+        border-radius: 8px;
+
+        .icon-ic_dislike,
+        .icon-ic_like,
+        .icon-ic_copy-2 {
+          &::before {
+            color: $primaryColorPurple !important;
+          }
+        }
+      }
+      .copyDivTextWrapper {
+        top: 50px;
+        left: -25px;
+        .copiedText {
+          font: normal 700 14px/20px $font-family-base;
+          color: $primaryColorPurple;
+        }
+      }
+    }
+
+    .subText {
+      color: rgba(18, 20, 51, 0.9);
+    }
+    .chatBoxInputControl {
+      // width: 100%;
+      bottom: 0px;
+      border-radius: 16px;
+      height: 124px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      // border-bottom-left-radius: 16px;
+      // border-bottom-right-radius: 16px;
+      // background-color: $white;
+      position: absolute;
+    }
+    //chatBotAnswrerSection
+    .quesAnsListView {
+      background-color: $white;
+      overflow-x: auto;
+      height: calc(100vh - 310px);
+      @extend .taskScroll;
+      // margin-bottom: 500px;
+
+      .chatBotQuestionSection {
+        .asnBox {
+          p {
+            font: normal 400 16px/28px $font-family-base;
+            color: #121433;
+          }
+        }
+        .MuiAvatar-root {
+          width: 50px;
+          min-width: 50px;
+          height: 50px;
+        }
+      }
+      .chatBotAnswerSection {
+        border: 1px solid rgba(200, 203, 208, 0.5);
+        background: #f7f7f8;
+        .usericonBox {
+          width: 50px;
+          height: 50px;
+          min-width: 50px;
+          border-radius: 25%;
+          background-color: $primaryColorPurple;
+          color: $white;
+          .icon-averyAI {
+            font-size: 32px;
+          }
+        }
+        .asnBox {
+          overflow-wrap: anywhere;
+        }
+      }
+      .addNewTaskBtn {
+        right: -90px;
+        top: 0px;
+      }
+    }
+    .oppsText {
+      font-weight: 600;
+      // padding-top: 14px;
+    }
+    .ansSources {
+      background-color: #e9e9e9;
+    }
+  }
+  //left side bar  panel
+  .leftPanel {
+    position: relative;
+    height: calc(100vh - 190px);
+    min-height: calc(100vh - 190px);
+    // all chat list
+    .btnFont {
+      font: normal 900 14px/20px $font-family-base;
+    }
+    .chatHistoryList {
+      @extend .commonListScroll;
+      overflow-y: auto;
+      .chats {
+        .title {
+          color: $colorNeutralGrey07;
+          font: normal 700 14px/20px $font-family-base;
+          cursor: pointer;
+        }
+        .buttonControl {
+          display: none;
+        }
+
+        .item {
+          background-color: $card-bg-color;
+          @include border-radius(8px);
+          color: $tooltip-bg-color;
+          cursor: pointer;
+          border: 1px solid transparent;
+
+          .sessionTitle {
+            font: normal 400 14px/18px $font-family-base;
+          }
+
+          &:hover {
+            border-color: $selectedListBorder;
+            background-color: $selectedListItemBackground;
+            .buttonControl {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .streamTextLoader {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      right: -15px;
+      top: 8px;
+      height: 10px;
+      background-color: $primaryColorPurple;
+      border-radius: 50%;
+      animation: zoomInOut 2s infinite;
+
+      @keyframes zoomInOut {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+  pre code,
+  p,
+  label {
+    background: none !important;
+    font: normal 500 16px/28px $font-family-base;
+    color: #121433;
+    padding: 0px !important;
+    text-wrap: wrap;
+    margin: 0px auto;
+  }
+}
+
+.averyAitaskCardBody {
+  height: calc(100vh - 405px);
+  // @extend .commonListScroll;
+  @extend .taskScroll;
+  .MuiInputBase-input,
+  .MuiOutlinedInput-input,
+  .MuiInputBase-inputMultiline {
+    height: auto !important;
+    overflow: auto !important;
+    @extend .commonListScroll;
+  }
+}
+.sampleQuestion {
+  background-color: $accordionUpBgColor;
+  min-height: 50px;
+  border-radius: 8px;
+}
+.sampleQuestionAccordion {
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  background-color: $accordionUpBgColor;
+  bottom: 0;
+  height: calc(100vh - 360px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @extend .commonListScroll;
+  .header {
+    color: $colorNeutralGrey02;
+  }
+  .accordionList {
+    .accordionHeader {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .accordion {
+      background-color: $white;
+      border-radius: 1;
+      width: calc(100% - 20px);
+      color: $colorNeutralGrey02;
+      .accordionText {
+        font: normal 400 14px/18px $font-family-base;
+      }
+    }
+    .textColor {
+      color: $iconColor;
+    }
+  }
+  .accordionfooter {
+    height: 200px;
+  }
+}
+.rightIconFont {
+  .MuiSvgIcon-root,
+  .MuiSvgIcon-fontSizeMedium {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.iconBg {
+  color: $colorNeutralGrey02;
+  background: $accordionUpBgColor !important;
+  border: 0px !important;
+  padding: 0px;
+  box-sizing: content-box;
+}
