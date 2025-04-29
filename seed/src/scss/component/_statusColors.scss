@@ -1,0 +1,139 @@
+//status wise task colors
+.createdTask {
+  background: $createdTaskBgColor !important;
+  border-color: $createdTaskColor;
+  color: $createdTaskColor;
+}
+.inProgress {
+  background: $inProgressBgColor !important;
+  border-color: $inProgressColor;
+  color: $inProgressColor;
+}
+.pendingApproval {
+  background: $pendingApprovalBgColor !important;
+  border-color: $pendingApprovalColor;
+  color: $pendingApprovalColor;
+}
+.completedTask {
+  background: $completedTaskBgColor !important;
+  border-color: $completedTaskColor;
+  color: $completedTaskColor;
+}
+.deletedTask {
+  background: $deletedTaskBgColor !important;
+  border-color: $deletedTaskColor;
+  color: $deletedTaskColor;
+}
+
+.overDue {
+  background: $overDueTaskBgColor !important;
+  border-color: $overDueTaskColor;
+  color: $overDueTaskColor;
+}
+
+.libraryTag {
+  background-color: $libraryTagColor !important;
+  border-color: $libraryTagColor;
+  color: $white;
+}
+.currentTag {
+  background-color: $currentTagColor !important;
+  border-color: $currentTagColor;
+  color: $white;
+}
+.proposedTag {
+  background-color: $proposedTagColor !important ;
+  border-color: $proposedTagColor;
+  color: $white;
+}
+
+.criticalStatus {
+  padding: 5px 10px 5px 6px;
+  border: 1px solid $chipStatusBorderColor;
+  border-radius: 4px;
+  .box {
+    background-color: $colorAlertRed03;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
+  .chipText {
+    color: $colorAlertRed03;
+    font: normal 600 10px/12.1px $font-family-base !important;
+  }
+}
+.highStatus {
+  padding: 5px 10px 5px 6px;
+  border: 1px solid $chipStatusBorderColor;
+  border-radius: 4px;
+  .box {
+    background-color: $highStatus;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
+
+  .chipText {
+    color: $highStatus;
+    font: normal 600 10px/12.1px $font-family-base !important;
+  }
+}
+.mediumStatus {
+  padding: 5px 10px 5px 6px;
+  border: 1px solid $chipStatusBorderColor;
+  border-radius: 4px;
+
+  .box {
+    background-color: $mediumStatus;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
+  .chipText {
+    color: $mediumStatus;
+    font: normal 600 10px/12.1px $font-family-base !important;
+  }
+}
+.lowTaskTag {
+  padding: 5px 10px 5px 6px;
+  border: 1px solid $chipStatusBorderColor;
+  border-radius: 4px;
+
+  .box {
+    background-color: $lowStatus;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
+  .chipText {
+    color: $lowStatus;
+    font: normal 600 10px/12.1px $font-family-base !important;
+  }
+}
+
+.undefinedTaskTag {
+  padding: 5px 10px 5px 6px;
+  border: 1px solid $chipStatusBorderColor;
+  border-radius: 4px;
+
+  .box {
+    background-color: $undefinedTaskTag;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
+  .chipText {
+    color: $colorNeutralGrey07;
+    font: normal 600 10px/12.1px $font-family-base !important;
+  }
+}
+.regulationTaskTag {
+  background-color: $regulationTag;
+}
+
+.fineTaskTag {
+  background-color: $fineTag;
+}
+.enforcementTaskTag {
+  background-color: $enforcementTag;
+}

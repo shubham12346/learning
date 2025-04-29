@@ -1,0 +1,17 @@
+{
+  "welcomeTitle": "Welcome to Avery!",
+  "welcomeNote": "To view your personalized Avery dashboard, click continue.",
+  "continue": "Continue",
+  "addRegulationConfirmationMsg": "Are you sure want to add this regulation ?",
+  "alreadyRegualtionPresentMessage": "This regulation is already added",
+  "addRegulation": "ADD REGULATION",
+  "searchRegulationPlaceholder": " Search to add regulation",
+  "newAdded": "New added",
+  "inviteSent": "Invite Sent!",
+  "inviteDescription": "An activation link has been sent to ",
+  "circularProgressBarModal": {
+    "crdVerification": "CRD # Verification",
+    "pullingADVFormLoadingText": "Pulling up form ADV and extracting information",
+    "cancel": "Cancel"
+  }
+}

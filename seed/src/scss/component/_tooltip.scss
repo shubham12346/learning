@@ -1,0 +1,35 @@
+.MuiTooltip-popper {
+  .MuiTooltip-tooltip {
+    padding: 7px 20px;
+    max-width: 520px !important;
+    font: normal 500 12px/16px $font-family-base;
+    background-color: $tooltip-bg-color;
+    @include border-radius(6px);
+  }
+  span.MuiTooltip-arrow {
+    color: $tooltip-bg-color !important;
+  }
+}
+
+.tooltipInfoDetails {
+  .MuiTypography-body2 {
+    color: $white;
+  }
+  .items {
+    &:last-child {
+      margin-bottom: 0px !important;
+    }
+  }
+}
+
+.textFields,
+.selectformcontrol {
+  @extend .w-100;
+  .icon-info {
+    font-size: 16px;
+    color: $password-info-text;
+    &:hover {
+      color: rgba(63, 65, 89, 1);
+    }
+  }
+}

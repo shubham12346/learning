@@ -14,7 +14,9 @@ const Header = () => {
         navigate("/");
       }}
     >
-      <h2 className="read-the-docs">Frontend Machine Questions</h2>
+      <h2 className="read-the-docs text-4xl pb-5 text-white">
+        Frontend Machine Questions
+      </h2>
     </div>
   );
 };

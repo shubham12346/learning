@@ -1,0 +1,14 @@
+{
+  "newsBookmaredSuccess": "News bookmarked successfully.",
+  "newsBookmaredError": "News is already bookmarked !!",
+  "newsDeBookmaredSuccess": "Bookmark removed successfully.",
+  "newsDeBookmaredError": "Bookmark is already removed !!",
+  "latestNews": "Latest News",
+  "lastReadText": "Last Read",
+  "bookmarked": "Bookmarked",
+  "noBookmarYet": "No Bookmark Yet.",
+  "noLastReadNewsYet": "No Last Read News Yet.",
+  "lastReadNews": "As you read News articles, they will appear here.",
+  "bookmarkSectionSubText": "Click on the bookmark icons on any article to add it to the bookmarked section.",
+  "noReslutFound": "No matching news found. Please try again later or refine your search/filter."
+}

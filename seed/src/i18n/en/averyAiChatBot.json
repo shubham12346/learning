@@ -1,0 +1,19 @@
+{
+  "averyAIText": "Avery Co-Pilot",
+  "emptyTextTitle": "Hi, I am Avery! Your regulatory co-pilot!",
+  "emptySubTextTitle": "I can help you answer questions around specific regulations, enforcement  ",
+  "emptySubTextTitle2": "actions, fines, regulatory news and more! How can I help you today?",
+  "inputPlaceholder": "Ask me anything about the regulatory landscape",
+  "chatBotServerOffText": "Oops! Chatbot is not available at this moment. Please try again after some time",
+  "addTaskBtn": "Add Task",
+  "sourcesText": "Citations:",
+  "newChat": "NEW CHAT",
+  "deleteDescription": "Are you sure want to delete this chat ?",
+  "yes": "YES",
+  "no": "NO",
+  "copy": "Copy",
+  "copied": "Copied",
+  "like": "Like",
+  "dislike": "Dislike",
+  "enterToSave": "Press Enter To Save"
+}

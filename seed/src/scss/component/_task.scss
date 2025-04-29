@@ -1,0 +1,67 @@
+.taskWrapper {
+  .viewTabs {
+    .customToggleBtn {
+      &.MuiToggleButtonGroup-root {
+        .MuiToggleButton-root {
+          padding: 10px 40px;
+          font: normal 500 14px/18px $font-family-base;
+          transition: none;
+        }
+      }
+    }
+  }
+
+  .tasktable {
+    .MuiDataGrid-main {
+      .MuiDataGrid-columnSeparator {
+        &.MuiDataGrid-columnSeparator--sideRight {
+          right: -22px !important;
+        }
+      }
+    }
+  }
+
+  .dropDown {
+    background-color: $white;
+    border: 2px solid $colorNeutralGrey03;
+    font: normal 400 14px / 18px $font-family-base;
+    color: $filterColor;
+    &:hover {
+      background-color: $scrollBarBgColor;
+    }
+  }
+}
+
+.dropDownList {
+  .MuiMenu-list {
+    padding: 0px;
+  }
+  .css-kcw6dx-MuiList-root-MuiMenu-list {
+    padding: 0px !important;
+  }
+
+  &.MuiList-root & .MuiList-padding &.MuiMenu-list {
+    padding: 0px;
+  }
+}
+
+.addNewTaskScroll {
+  max-height: calc(100vh - 280px);
+  overflow-y: scroll;
+  @extend .commonListScroll;
+}
+.AddBtnText {
+  font: normal 400 14px / 18px 'Inter';
+  color: $filterColor;
+  background-color: $white;
+  border: 2px solid $colorNeutralGrey03;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2.85rem;
+  cursor: pointer;
+  &:hover,
+  :active {
+    background-color: $scrollBarBgColor;
+  }
+}

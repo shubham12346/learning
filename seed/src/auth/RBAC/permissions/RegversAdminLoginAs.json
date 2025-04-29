@@ -1,0 +1,352 @@
+{
+  "permissions": [
+    {
+      "modulePageUrl": "dashboard",
+      "moduleName": "Dashboard",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "users",
+      "moduleName": "Users",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-users",
+          "action": "Add Users",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-users",
+          "action": "Edit Users",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-users",
+          "action": "Delete Users",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations",
+      "moduleName": "Regulations",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-regulations",
+          "action": "Add Regulations",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-regulations",
+          "action": "Edit Regulations",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-regulations",
+          "action": "Delete Regulations",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations:regId",
+      "moduleName": "Regulations RegId",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-regulations",
+          "action": "Add Regulations",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionId",
+      "moduleName": "Regulations RegId and Action Plan Id",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-regulations",
+          "action": "Add Regulations",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-regulations",
+          "action": "Edit Regulations",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-regulations",
+          "action": "Delete Regulations",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 4,
+          "actionUrl": "add-task",
+          "action": "Add task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 5,
+          "actionUrl": "edit-task",
+          "action": "Edit task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 6,
+          "actionUrl": "delete-task",
+          "action": "Delete task",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionIdtask:taskMode",
+      "moduleName": "Regulations RegId, Action Plan Id, Task",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-task",
+          "action": "Add task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-task",
+          "action": "Edit task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-task",
+          "action": "Delete task",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations:regIdaction-plan:actionIdattachment",
+      "moduleName": "Regulations  , action plan attachments ",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-task",
+          "action": "Add task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-task",
+          "action": "Edit task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-task",
+          "action": "Delete task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 4,
+          "actionUrl": "add-regulations",
+          "action": "Add Regulations",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "tasks",
+      "moduleName": "Tasks",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-tasks",
+          "action": "Add Tasks",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "edit-tasks",
+          "action": "Edit Tasks",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "delete-tasks",
+          "action": "Delete Tasks",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "tasks:taskId",
+      "moduleName": "tasks  and task  view  with task id ",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "edit-tasks",
+          "action": "Edit Tasks",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "delete-tasks",
+          "action": "Delete Tasks",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "tasksedit:taskId",
+      "moduleName": "tasks  and task edit with task id  ",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "edit-tasks",
+          "action": "Edit Tasks",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "delete-tasks",
+          "action": "Delete Tasks",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "news",
+      "moduleName": "News",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "avery-ai",
+      "moduleName": "Avery Co-Pilot",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-task",
+          "action": "Add task",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "setting",
+      "moduleName": "Setting",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "fines",
+      "moduleName": "Fines",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "reports",
+      "moduleName": "Reports",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-report",
+          "action": "Add Report",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulations:regIdregulation-policies",
+      "moduleName": "Regulations, Reg ID,Regulation Policy ",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-edit-gap-analysis",
+          "action": "Add/Edit gap-analysis",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "add-edit-firm-policy",
+          "action": "Add/Edit Firm Policy",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "mydoc",
+      "moduleName": "My Docs",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "add-policy",
+          "action": "add-policy",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "delete-policy",
+          "action": "delete-policy",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "run-gap-analysis",
+          "action": "run-gap-analysis",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 4,
+          "actionUrl": "delete-file",
+          "action": "delete-file",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "fusion-one",
+      "moduleName": "Fusion1",
+      "actions": []
+    },
+    {
+      "modulePageUrl": "regulationsgapActionPlan",
+      "moduleName": "Gap Action plan",
+      "actions": [
+        {
+          "actionId": 1,
+          "actionUrl": "edit-task",
+          "action": "edit-task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 2,
+          "actionUrl": "delete-task",
+          "action": "delete-task",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 3,
+          "actionUrl": "save",
+          "action": "save",
+          "roleIsActive": true
+        },
+        {
+          "actionId": 4,
+          "actionUrl": "cancel",
+          "action": "cancel",
+          "roleIsActive": true
+        }
+      ]
+    },
+    {
+      "modulePageUrl": "regulationsgapassessmentviewdetails:activityId",
+      "moduleName": "Gap Activity Details View",
+      "actions": []
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+.fines {
+  .fineheader {
+    .fineGraphs {
+      background-color: $white;
+      box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
+      border: 1px solid rgba(233, 233, 248, 1);
+      @include border-radius(8px);
+      .fineGraphsInnerCard {
+        padding: 10px 13px 10px 13px;
+        height: 125px;
+        @include border-radius(10px);
+        background-color: #f5f7fd;
+        .description {
+          font: normal 12px/18px $font-family-base;
+        }
+      }
+    }
+  }
+}
+
+.filterSelect {
+  .selectformcontrol {
+    .MuiInputBase-root {
+      background-color: $white;
+      box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
+      border: 1px solid rgba(233, 233, 248, 1);
+      @include border-radius(8px);
+    }
+  }
+}
+
+// fine model for table
+.fineTag {
+  background-color: $cardDateTagBgColor;
+  @include border-radius(8px);
+}
+.fineModalContent {
+  background: $loaderbgColor;
+  .boxPadding1 {
+    padding: 28px 40px 16px 40px;
+  }
+  .boxPadding2 {
+    padding: 10px 40px 32px 40px;
+  }
+  .divider {
+    background-color: rgba(180, 181, 192, 0.5);
+  }
+  .imgBox {
+    background-color: $white;
+    height: 44px;
+    width: 44px;
+    @include border-radius(50%);
+    & :first-child {
+      font-size: 24px;
+    }
+  }
+  .modelSource {
+    @include ellipseWithLine(1, 25px);
+  }
+  .taskLink {
+    a {
+      font: normal 500 14px/18px $font-family-base;
+      color: $primaryColorPurple;
+      letter-spacing: 0.14px;
+    }
+  }
+}
+
+.selectedDonut {
+  background-color: $dateTextColor;
+  position: relative;
+  width: 134px;
+  height: 54px;
+  @include border-radius(8px);
+  .indicaters {
+    border: 1px solid $white;
+  }
+  .seriesItems {
+    color: $white;
+  }
+  & ::after {
+    content: ' ';
+    position: absolute;
+    right: -9px;
+    top: 9px;
+    border-top: 20px solid transparent;
+    border-right: none;
+    border-left: 22px solid $dateTextColor;
+    border-bottom: 20px solid transparent;
+  }
+}
+
+.horziontalGraphTooltip {
+  background-color: $dateTextColor;
+  padding: 12px 12px 16px 17px;
+  position: relative;
+
+  & :first-child {
+    color: $white;
+  }
+}
+.dividerInFine {
+  border-right: 1px solid $multiselectCheckbox !important;
+  background-color: $white !important;
+  @include border-radius(8px);
+}
+
+.fineModelClose {
+  .close-icon-modal {
+    @extend .p-absolute;
+    top: 28px;
+    right: 21px;
+  }
+}

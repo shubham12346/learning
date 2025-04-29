@@ -1,0 +1,58 @@
+.autocompleteWrapper {
+  position: relative;
+  .MuiOutlinedInput-root {
+    background-color: $white;
+  }
+  .icon-search:before {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .MuiAutocomplete-popupIndicator {
+    @extend .displayNone;
+  }
+  .MuiAutocomplete-clearIndicator,
+  .MuiAutocomplete-clearIndicator :hover {
+    background-color: $white !important;
+    color: $colorNeutralGrey02 !important;
+  }
+  .seacrhNoUserFoundHeigth {
+    height: 61vh;
+  }
+  .serachLoadingHeight {
+    height: 64vh;
+  }
+  .MuiAutocomplete-listbox {
+    max-height: 64vh !important;
+    height: 64vh;
+    overflow-y: auto;
+    @include commonScrollBar;
+    padding: 20px;
+    .MuiAutocomplete-option.Mui-focused {
+      color: $primaryColorPurple2;
+      background-color: $dropdownBgColor;
+      font-weight: bold;
+    }
+  }
+
+  .MuiAutocomplete-paper {
+    ul {
+      li {
+        margin-bottom: 20px;
+        @extend .p-relative;
+        &::before {
+          @extend .p-absolute;
+          content: '';
+          @include border-radius(50%);
+          background-color: $colorNeutralGrey07;
+          width: 6px;
+          min-width: 6px;
+          height: 6px;
+          min-height: 6px;
+          padding-right: 5px;
+          margin-left: -15px;
+        }
+      }
+    }
+  }
+}

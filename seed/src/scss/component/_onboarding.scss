@@ -1,0 +1,143 @@
+.onboarding-section {
+  padding: 0px !important;
+  width: 351px;
+  overflow: hidden;
+
+  .onboarding-side-bar {
+    background-color: $white;
+  }
+
+  .wrapper-onbarding {
+    overflow: auto;
+    @include commonScrollBar;
+    &::-webkit-scrollbar {
+      width: 9px !important;
+      height: 10px !important;
+    }
+
+    &.onbarding-business-details {
+      @media (min-width: 768px) {
+        height: calc(100vh - 250px);
+      }
+
+      //datepicker label hide for onboarding only
+      .datePickerContainer {
+        .datePickerLabel {
+          display: none;
+        }
+        .textFields {
+          .MuiInputBase-input {
+            &::placeholder {
+              color: #121433;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+
+    &.wrapper-onbarding-emp-details {
+      height: calc(100vh - 375px);
+      min-height: calc(100vh - 375px);
+    }
+  }
+  .crd-wrapper {
+    height: calc(100vh - 250px);
+    @media (min-width: 768px) {
+      height: calc(100vh - 250px);
+    }
+    .onboardingQuestion {
+      font-weight: 600 !important;
+    }
+
+    .crdNextDescription {
+      font: 400 italic 0.875rem/1.125rem $font-family-base;
+    }
+  }
+
+  .regulation-detail-screen {
+    height: calc(100vh - 270px);
+    .searchRegualtions {
+      box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
+    }
+  }
+
+  .regulation-detail-screen-scroll {
+    height: calc(100vh - 440px);
+    overflow: auto;
+    @include commonScrollBar;
+  }
+
+  .form-button {
+    height: '2.75rem';
+  }
+
+  .onboarding-stepper {
+    width: 1.875rem;
+    min-width: 1.875rem;
+    height: 1.875rem;
+    border: 2px solid #31125f;
+    @include border-radius(50%);
+  }
+  .regulationDetlsHeader {
+    border-bottom: 1px solid rgba(180, 181, 192, 0.5);
+  }
+}
+
+//regulationModalBox
+.regulationModalBox {
+  min-width: 760px;
+  @include border-radius(8px);
+  background-color: #f1f3f8;
+  .iconBox {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    @include border-radius(50%);
+    background-color: $white;
+  }
+  hr {
+    background-color: $hr-bg-color;
+    border: none;
+    height: 1px;
+  }
+  .boxListTitle {
+    color: rgba(18, 20, 51, 0.7);
+  }
+  .boxListValue {
+    color: $primaryTextColor;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 18px;
+    &.linkColor {
+      color: $primaryColorPurple !important;
+    }
+  }
+}
+.removeTextColor {
+  color: $colorNeutralGrey07;
+}
+
+.newAddedTag {
+  background-color: $multiselectCheckbox;
+  padding: 6px 20px;
+  @include border-radius(8px);
+  border-color: $table-border-color;
+  :first-child {
+    color: $primaryColorPurple;
+  }
+}
+
+.selectCategory {
+  &:hover {
+    background-color: $card-bg-color !important;
+    .categoryTitle {
+      @extend .textweight;
+      color: $primaryColorPurple;
+    }
+  }
+}
+.multiselectList {
+  @extend .commonListScroll;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,32 @@
+@import '../../../scss/variables';
+.regulationBoxLeft {
+  padding: 20px;
+
+  .regulationBullet {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #121433;
+  }
+
+  .eastIcon {
+    background-color: #e9e9f8;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    cursor: pointer;
+    svg {
+      font-size: 12px;
+      color: $primaryColorPurple;
+    }
+  }
+}
+
+.flex-even {
+  flex: 1;
+}
+.subtitle3 {
+  font-size: '0.75rem';
+}

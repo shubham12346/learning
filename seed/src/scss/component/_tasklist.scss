@@ -1,0 +1,43 @@
+.tasklistWrapper {
+  cursor: pointer;
+  .taskContent {
+    height: 123px;
+  }
+  .tasksHeader {
+    .targetDateLabel {
+      font: normal 400 0.875rem/1.125rem $font-family-base;
+      span:first-child {
+        color: rgba(63, 65, 89, 0.8);
+      }
+    }
+    .targetDate {
+      @extend .targetDate;
+      font-weight: 700;
+      color: $colorNeutralGrey08;
+    }
+    .chip-status.MuiChip-root .MuiChip-label {
+      padding: 0px 10px !important;
+    }
+  }
+  .tasktitle {
+    font: normal 400 0.875rem/1.25rem $font-family-base;
+    @include ellipseWithLine(2, 40px);
+  }
+  .viewAllButton {
+    font: normal 700 0.875rem/1.25rem $font-family-base !important;
+  }
+  .nearDeadline {
+    color: $colorAlertRed03;
+    font-weight: 700;
+  }
+  .alert {
+    min-height: 10px;
+    height: 10px;
+    width: 10px;
+    min-width: 10px;
+    right: -6px;
+    @include border-radius(50%);
+    top: -4px;
+    background-color: $colorAlertRed03;
+  }
+}

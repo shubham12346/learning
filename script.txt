@@ -1,0 +1,97 @@
+Prepare me a script for when some hr team asks my introduction 
+
+
+ChatGPT said:
+Sure! Here's a concise and confident self-introduction script you can use when an HR team asks you to introduce yourself, especially tailored for your frontend developer background:
+
+HR Interview Introduction Script (Frontend Developer)
+
+"Hi, my name is [Your Name], and I have close to 2 years of experience as a Frontend Developer, primarily working with React and TypeScript.
+
+In my most recent role, I’ve led the frontend development of a project where I built the UI from scratch based on Figma designs. I also implemented reusable components, dynamic forms using React Hook Form, role-based access control, and integrated libraries like ApexCharts and React Big Calendar.
+
+Alongside development, I took up responsibilities like requirement analysis, client communication, and even worked as a Scrum Master, which helped me understand both the technical and business side of things.
+
+I’m passionate about writing clean, scalable code and enjoy exploring new tools and technologies that improve performance and user experience.
+
+Currently, I’m looking for a role where I can contribute to impactful projects, grow as a frontend engineer, and work with a team that values ownership and continuous learning."
+
+Want me to help tailor this even more based on the specific company or role you’re interviewing for?
+
+
+
+
+
+
+
+You said:
+write a script for why you won't chage company 
+
+
+ChatGPT said:
+Got it! Here’s a solid, professional script for answering “Why won’t you change your current company?” — this could be useful if you’re in a situation like being counter-offered, or being asked why you’ve stayed in one place, or even justifying why you might not switch.
+
+Script: Why You Won’t Change Company
+
+"At this point, I believe in growing where I am. My current company has given me opportunities to take ownership, lead initiatives, and directly interact with clients — all of which have helped me grow not just technically but also professionally.
+
+The team culture is supportive, I have clarity on my growth path, and I’m currently working on projects that challenge me and align with my long-term goals. So unless there's a significantly compelling opportunity that aligns better with my vision or learning curve, I don’t see a strong reason to switch just for the sake of it.
+
+For me, stability and depth of experience matter, and I want to make sure I create impact before thinking about a change."
+
+Let me know the exact context — like are you saying this to HR in your current company? Or to a new company that’s asking why you might not leave? I can tweak it accordingly.
+
+
+
+
+
+
+
+You said:
+write a script for why you  chage company 
+
+
+
+ChatGPT said:
+Absolutely! Here's a confident and positive script for “Why did you change your company?” — this is a common HR question, and your answer should show that the decision was thoughtful and growth-driven.
+
+Script: Why You Changed Company
+
+"I changed my company because I was looking for better growth opportunities — both technically and professionally. While I learned a lot in my previous role, I felt I had reached a point where I needed new challenges to push myself further.
+
+I wanted to work on more complex projects, take more ownership, and be in an environment that supports continuous learning and innovation. Making that move was a conscious decision to step out of my comfort zone and level up my skills.
+
+I believe each transition should have a purpose, and for me, it was about aligning my work with my long-term goals."
+
+Would you like a version tailored to a specific situation, like if you’re moving for a better role, higher pay, work culture, or a new tech stack?
+
+
+
+
+
+
+
+You said:
+write a script for why you want to   change company 
+
+
+ChatGPT said:
+Of course! Here's a polished and honest script for "Why do you want to change your current company?" — this version highlights your ambition and desire for growth, while staying respectful to your current employer.
+
+Script: Why You Want to Change Company
+
+"I'm really grateful for the opportunities I've had at my current company — I've learned a lot and grown significantly, especially in frontend development with React and TypeScript.
+
+However, I’m now looking for a role that can offer more challenging projects, a faster-paced environment, and a chance to work with a highly skilled team where I can continue to push my limits. I also want to expand my exposure to modern tools, architectural patterns, and end-to-end product development.
+
+Ultimately, I’m looking for a place where I can make a bigger impact, grow faster, and align more closely with my long-term career goals."
+
+Want me to personalize it further based on the company you’re applying to or the specific reason (like salary, remote work, team culture, etc.)?
+
+
+
+
+
+
+
+

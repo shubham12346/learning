@@ -1,0 +1,169 @@
+.reports {
+  .GapAssessmentList {
+    .css-kk29es-MuiDataGrid-root .MuiDataGrid-cell--textLeft {
+      margin-left: 3px;
+    }
+    .MuiDataGrid-overlay {
+      align-items: start;
+    }
+
+    .MuiDataGrid-columnHeaders {
+      padding: 7px;
+    }
+    .MuiDataGrid-row {
+      div {
+        &:first-child {
+          padding: 8px;
+        }
+      }
+    }
+
+    .MuiDataGrid-virtualScroller {
+      @include commonScrollBar;
+      overflow-y: auto !important;
+    }
+
+    @media (min-width: 1260px) {
+      .MuiDataGrid-virtualScroller {
+        overflow-x: hidden !important;
+        height: calc(100vh - 544px);
+      }
+    }
+    &.withGeneratedTable {
+      @media (min-width: 1260px) {
+        .MuiDataGrid-virtualScroller {
+          overflow-x: hidden !important;
+          height: calc(100vh - 475px);
+        }
+      }
+    }
+  }
+
+  .reportIconBox {
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    background: #f5f7fd;
+    @include border-radius(8px);
+    [class*='icon-'] {
+      font-size: 32px;
+      color: #3f4159;
+    }
+  }
+  .viewAllArrow {
+    width: 16px;
+    height: 16px;
+    @include border-radius(50%);
+    background-color: #e9e9f8;
+  }
+
+  //reportsDetails
+  .reportsDetails {
+    .reportsTableList {
+      .MuiDataGrid-columnHeaders {
+        padding: 16px;
+      }
+      .MuiDataGrid-row {
+        div {
+          &:first-child {
+            padding: 8px;
+          }
+        }
+      }
+
+      .MuiDataGrid-virtualScroller {
+        @include commonScrollBar;
+        overflow-y: auto !important;
+      }
+
+      @media (min-width: 1260px) {
+        .MuiDataGrid-virtualScroller {
+          overflow-x: hidden !important;
+          height: calc(100vh - 544px);
+        }
+      }
+      &.withGeneratedTable {
+        @media (min-width: 1260px) {
+          .MuiDataGrid-virtualScroller {
+            overflow-x: hidden !important;
+            height: calc(100vh - 475px);
+          }
+        }
+      }
+    }
+    .datePickerContainer {
+      .textFields {
+        .MuiTypography-body2 {
+          // display: none;
+          font: normal 400 14px/18px $font-family-base;
+          color: rgba(18, 20, 51, 0.7);
+          position: absolute;
+          z-index: 9;
+          top: 12px;
+          left: 21px;
+        }
+        .MuiFormControl-root {
+          .MuiInputBase-root {
+            background-color: $white;
+            box-shadow: 0px 4px 12px 0px rgba(13, 10, 44, 0.06);
+            height: 44px;
+            .MuiInputBase-input {
+              &::placeholder {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .emptyCard {
+      height: calc(100vh - 300px);
+    }
+  }
+  //icon rotate
+  .icon-reset-filter {
+    transform: scaleX(-1);
+    color: $primaryColorPurple;
+  }
+  .reportFilterSection {
+    .refreshBtn {
+      right: 0px;
+      top: 0px;
+    }
+  }
+}
+
+.reportsCard {
+  max-height: 250px;
+  min-height: 250px;
+  .description {
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    overflow: auto;
+    @include commonScrollBar;
+  }
+}
+.refreshButtonWrapper {
+  .paddingTop {
+    padding-top: 10px;
+  }
+  @media (min-width: 1840px) {
+    .paddingTop {
+      padding-top: 0px;
+    }
+  }
+  .refreshButton {
+    .marginRight {
+      margin-right: 20px;
+    }
+    @media (min-width: 1840px) {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20%;
+      .marginRight {
+        margin-right: 0px;
+      }
+    }
+  }
+}

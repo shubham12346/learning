@@ -1,0 +1,29 @@
+.dynamicTable {
+  height: calc(100vh - 478px);
+  overflow-x: scroll;
+  @extend .taskScroll;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      background-color: rgba(180, 181, 192, 0.5);
+
+      th {
+        border: 0.5px solid #000000;
+      }
+    }
+
+    tbody {
+      border-collapse: collapse;
+      tr {
+        td {
+          border: 0.5px solid #000000;
+          padding-inline: 10px;
+        }
+      }
+    }
+  }
+}
+.bgLoaderScreen {
+  height: calc(100vh - 490px);
+}

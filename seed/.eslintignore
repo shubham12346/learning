@@ -1,0 +1,13 @@
+# .estlintignore file
+
+dist
+build
+.scannerwork
+node_modules/
+babel.config.js
+Modalinterface.ts
+sonar-project.js
+filetransform.js
+sorter.js
+prettify.js
+block-navigation.js
