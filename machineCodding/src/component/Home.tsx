@@ -16,8 +16,8 @@ const Home = () => {
             onClick={() => {
               handleClick(item.route);
             }}
+            className="text-white"
           >
-            {" "}
             {item.title}
           </li>
         ))}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .productList {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product {
+        height: 150px;
+        width: 300px;
+        background-color: aqua;
+        margin: 5px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <input type="text" name="" id="search" placeholder="search " />
+      <select id="filterCategory">
+        <option value="allCategory">All category</option>
+        <option value="category1">category1</option>
+        <option value="category1">category1</option>
+        <option value="category1">category1</option>
+      </select>
+    </header>
+    <main id="products"></main>
+    <script>
+      console.log("hello");
+      const products = document.getElementById("products");
+      const select = document.getElementById("filterCategory");
+      const search = document.getElementById("search");
+
+      products.className = "productList";
+
+      // maintain state for search and select and products
+      let Products = [];
+      let state = {
+        category: "",
+        search: "",
+      };
+
+      // debouncer
+      function debouncer(fn) {
+        let timer;
+        return (...args) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            fn(...args);
+          }, 500);
+        };
+      }
+      // function for api call with filter and search
+      const fetchProducts = async (category, search) => {
+        const res = await fetch(`https://dummyjson.com/products`);
+        const data = await res.json();
+        Products = data.products;
+        console.log("Products", Products);
+        renderProduct(Products);
+      };
+      // function for getting products from api call and paint dom
+
+      const renderProduct = (data) => {
+        products.innerHTML = "";
+
+        data?.forEach((item) => {
+          let div = document.createElement("div");
+          div.className = "product";
+          div.innerHTML = `
+            <div id="${item.id}" >
+              <h1> ${item.title}</h1>
+            </div>
+          `;
+          products.appendChild(div);
+        });
+      };
+
+      // const searchAndUpdateUi = (serachWord)=>{
+      //   const products =
+
+      // }
+
+      const debouncedSearch = debouncer(fetchProducts, 500);
+      // attaching event listenter for filter and search
+      search.addEventListener("input", (e) => {
+        debouncedSearch(e.target.value, "");
+        state.search = e.target.value;
+      });
+
+      // searching
+      //  function call
+      fetchProducts("", "");
+    </script>
+  </body>
+</html>

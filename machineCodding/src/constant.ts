@@ -17,4 +17,28 @@ export const components = [
     algorithm: "initial",
     route: "/fileExplorer",
   },
+  {
+    id: 4,
+    title: "React Progress Bar ",
+    algorithm: "initial",
+    route: "/progressBar",
+  },
+  {
+    id: 5,
+    title: "Search and debounce and throttle  ",
+    algorithm: "initial",
+    route: "/searchAndDebounce",
+  },
+  {
+    id: 6,
+    title: "Bread Crumb ",
+    algorithm: "initial",
+    route: "/breadcrumb",
+  },
+  {
+    id: 7,
+    title: "Carasoul ",
+    algorithm: "initial",
+    route: "/carasoul",
+  },
 ];

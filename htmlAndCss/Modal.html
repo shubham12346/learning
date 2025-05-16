@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modalOverlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+      }
+      .modal {
+        height: 400px;
+        width: 400px;
+        background-color: white;
+      }
+      .modalOverlay.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="openBtn">open the modal</button>
+    <div class="modalOverlay" id="modalOverlay">
+      <div class="modal">
+        <div>Hello this the text</div>
+        <button id="closeBtn">close the modal</button>
+      </div>
+    </div>
+    <script>
+      const openBtn = document.getElementById("openBtn");
+      const modalOverlay = document.getElementById("modalOverlay");
+      const closeBtn = document.getElementById("closeBtn");
+
+      openBtn.addEventListener("click", function (e) {
+        modalOverlay.classList.add("show");
+      });
+
+      closeBtn.addEventListener("click", function (e) {
+        modalOverlay.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>

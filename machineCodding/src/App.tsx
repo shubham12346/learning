@@ -4,10 +4,16 @@ import CheckBox from "./component/CheckBox";
 import ListWithViisulation from "./component/ListWithViisulation";
 import { components } from "./constant";
 import Header from "./component/Header";
-import FileExplorer from "./component/FileExplorer";
+import ProgressBar from "./component/ProgressBar";
+import SearchAndDebounce from "./component/SearchAndDebounce";
+import BreadCrumb from "./component/BreadCrumb";
+import useScreenType from "./hooks/useScreenType";
+import ResponsiveCard from "./component/ResponsiveCard";
 function App() {
+  const { screenType } = useScreenType();
+  console.log("screenType", screenType);
   return (
-    <div className="bg-gray-700 h-screen px-5 py-5">
+    <div className="bg-gray-700 h-screen px-5 py-5 ">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -17,11 +23,20 @@ function App() {
             path={`${components[1].route}`}
             element={<ListWithViisulation />}
           />
-          <Route path={`${components[2].route}`} element={<FileExplorer />} />
+          <Route
+            path={`${components[1].route}`}
+            element={<ListWithViisulation />}
+          />
+          <Route path={`${components[3].route}`} element={<ProgressBar />} />
+          <Route
+            path={`${components[4].route}`}
+            element={<SearchAndDebounce />}
+          />
+          <Route path={`${components[5].route}`} element={<BreadCrumb />} />
+          <Route path={`${components[6].route}`} element={<ResponsiveCard />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;
