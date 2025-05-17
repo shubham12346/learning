@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 
 const listWithViisulation = () => {
-  const items = Array.from({ length: 20000 }, (_, i) => `Item ${i + 1}`);
+  const items = Array.from({ length: 2000 }, (_, i) => `ITEM-${i}`);
 
   return (
     <div>
@@ -14,16 +14,17 @@ const listWithViisulation = () => {
 export default listWithViisulation;
 
 const VirtualList = ({ items, itemHeight, height }) => {
+  const containerRef = useRef<any>(null);
   const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef(null);
 
-  const totalHeight = items.length * itemHeight;
-  const visibleCount = Math.ceil(height / itemHeight);
+  const totalHeight = itemHeight * items.length;
+  const virtualLength = Math.ceil(scrollTop / itemHeight);
+  const startIndex = Math.max(0, virtualLength);
+  const endIndex = Math.min(items.length - 1, startIndex + virtualLength + 10);
 
-  const startIndex = Math.floor(scrollTop / itemHeight);
-  const endIndex = Math.min(items.length - 1, startIndex + visibleCount + 1);
-
-  const visibleItems = items.slice(startIndex, endIndex + 1);
+  const virtualItems = useMemo(() => {
+    return items.slice(startIndex, endIndex);
+  }, [items, startIndex, endIndex]);
 
   const handleScroll = (e) => {
     setScrollTop(e.currentTarget.scrollTop);
@@ -31,28 +32,28 @@ const VirtualList = ({ items, itemHeight, height }) => {
 
   return (
     <div
+      style={{ height: height, overflow: "auto", border: "1px solid #eee" }}
       ref={containerRef}
       onScroll={handleScroll}
-      style={{ overflowY: "auto", height, border: "1px solid #ccc" }}
     >
       <div style={{ height: totalHeight, position: "relative" }}>
-        {visibleItems.map((item, index) => {
-          const realIndex = startIndex + index;
+        {virtualItems?.map((virtualizedItems, index) => {
+          const realIndex = index + startIndex;
           return (
             <div
-              key={realIndex}
+              key={index}
               style={{
                 position: "absolute",
-                top: realIndex * itemHeight,
-                height: itemHeight,
                 left: 0,
                 right: 0,
+                top: `${realIndex * itemHeight}px`,
+                height: itemHeight + "px",
                 padding: "8px",
                 boxSizing: "border-box",
                 borderBottom: "1px solid #eee",
               }}
             >
-              {item}
+              {virtualizedItems}
             </div>
           );
         })}

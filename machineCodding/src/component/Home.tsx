@@ -9,14 +9,18 @@ const Home = () => {
   };
   return (
     <div>
-      <ol style={{ cursor: "pointer" }}>
+      <ol
+        style={{ cursor: "pointer" }}
+        type="1"
+        className="text-white list-decimal mx-4"
+      >
         {components?.map((item) => (
           <li
             key={item.id}
             onClick={() => {
               handleClick(item.route);
             }}
-            className="text-white"
+            className="text-white "
           >
             {item.title}
           </li>
