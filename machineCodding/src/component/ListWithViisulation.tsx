@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, memo, useCallback } from "react";
 import { FixedSizeList as List } from "react-window";
 
 const listWithViisulation = () => {
@@ -35,6 +35,8 @@ const listWithViisulation = () => {
       <VisrtualListWithWindow height={400} itemHeight={150} items={items} />
       <h2>A normal table</h2>
       <VirtualizationForAtable />
+      <h2>A Vitualized check box</h2>
+      <VirtualizedCheckBox />
     </div>
   );
 };
@@ -126,6 +128,47 @@ const VirtualizationForAtable = () => {
       </div>
       <List height={400} itemCount={data.length} itemSize={35} width={300}>
         {TableRow}
+      </List>
+    </>
+  );
+};
+
+const Row = memo(({ index, style, data }) => {
+  const { selected, toggleItem } = data;
+  return (
+    <div style={{ ...style, display: "flex", alignItems: "center" }}>
+      <input
+        type="checkbox"
+        checked={selected.has(index)}
+        onChange={() => toggleItem(index)}
+      />
+      <label style={{ marginLeft: "10px" }}>Checkbox {index}</label>
+    </div>
+  );
+});
+
+const VirtualizedCheckBox = () => {
+  const data = Array.from({ length: 1000 }, (_, i) => i);
+  const [selected, setSelected] = useState(new Set());
+
+  const toggleItem = useCallback((id) => {
+    setSelected((prev) => {
+      const newSet = new Set(prev);
+      newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+      return newSet;
+    });
+  }, []);
+
+  return (
+    <>
+      <List
+        height={400}
+        itemCount={data.length}
+        itemSize={35}
+        width={300}
+        itemData={{ selected, toggleItem }}
+      >
+        {Row}
       </List>
     </>
   );
