@@ -13,7 +13,7 @@ function App() {
   const { screenType } = useScreenType();
   console.log("screenType", screenType);
   return (
-    <div className="bg-gray-700 h-screen px-5 py-5 ">
+    <div className="bg-gray-700 h-full px-5 py-5 ">
       <BrowserRouter>
         <Header />
         <Routes>

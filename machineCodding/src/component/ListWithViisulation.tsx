@@ -1,12 +1,40 @@
 import { useState, useRef, useMemo } from "react";
+import { FixedSizeList as List } from "react-window";
 
 const listWithViisulation = () => {
   const items = Array.from({ length: 2000 }, (_, i) => `ITEM-${i}`);
 
   return (
-    <div>
-      <h1>List with Visulation</h1>
+    <div className="text-white h-full">
+      <h1>List with Visulation with custom hook </h1>
+      <pre>
+        {`while making a simple data list virtualization 
+
+          step 1 : pass component ,height , each Item height  and total items 
+          step 2 : calculate virtualization elements 
+
+            such as 
+          totalHeight = itemHeight * total items ( creates an empty hollow div the height to contain all elements )
+          virtualItemNumber = (height/ itemHeight) number of items to be shown on the ui 
+          startIndex 
+          endIndex 
+          virtualItems = items.slice(startIndex,endIndex+10)
+
+          div style ={{ height :height;, overflow: auto  }}
+            div style ={{height : toatlHeight }}  
+              {
+                virtiualItems.map((item,index)=> 
+                  const realIndex = startIndex+index ;
+                    div style ={{ postion:'absolute',top: realIndex * itemHeight,left :0,right:0	  }}
+                  )
+              }
+        `}
+      </pre>
       <VirtualList items={items} itemHeight={40} height={400} />;
+      <h2> List virtualization with react window </h2>
+      <VisrtualListWithWindow height={400} itemHeight={150} items={items} />
+      <h2>A normal table</h2>
+      <VirtualizationForAtable />
     </div>
   );
 };
@@ -59,5 +87,46 @@ const VirtualList = ({ items, itemHeight, height }) => {
         })}
       </div>
     </div>
+  );
+};
+
+const VisrtualListWithWindow = ({ items, itemHeight, height }) => {
+  const Row = ({ index, style }) => <div style={style}>Row {index}</div>;
+  return (
+    <List height={height} itemCount={items.length} itemSize={35} width={300}>
+      {Row}
+    </List>
+  );
+};
+
+const VirtualizationForAtable = () => {
+  const columns = ["Id", "Name"];
+  const data = Array.from({ length: 1000 }).map((_, index) => {
+    return {
+      Id: index + 1,
+      Name: `User ${index + 1}`,
+    };
+  });
+
+  const TableRow = ({ index, style }) => (
+    <div
+      style={{ ...style, display: "flex", color: "white" }}
+      className="text-white"
+    >
+      <div style={{ width: "50%" }}>{data[index].Id}</div>
+      <div style={{ width: "50%" }}>{data[index].Name}</div>
+    </div>
+  );
+  return (
+    <>
+      <div>
+        {columns?.map((col, Index) => (
+          <div key={Index}>{col} </div>
+        ))}
+      </div>
+      <List height={400} itemCount={data.length} itemSize={35} width={300}>
+        {TableRow}
+      </List>
+    </>
   );
 };
