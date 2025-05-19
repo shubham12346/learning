@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useToaster } from "./toastSystemDesign/ToastContext";
+import { createPortal } from "react-dom";
+import Portal from "./portal/Portal";
 
 const SearchAndDebounce = () => {
   const [users, setUsers] = useState([]);
@@ -7,6 +9,7 @@ const SearchAndDebounce = () => {
   const [throttle, setThrottle] = useState(0);
   const debounced = useRef<any>(null);
   const countRef = useRef(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const { addToaster } = useToaster();
 
@@ -67,6 +70,23 @@ const SearchAndDebounce = () => {
       <button className="m-20 cursor-pointer border-2 " onClick={handleToaster}>
         Add Toaster
       </button>
+      <button
+        onClick={() => {
+          setModalOpen(true);
+        }}
+        className="border-2 cursor-pointer"
+      >
+        Open Modal
+      </button>
+      {modalOpen &&
+        createPortal(
+          <Portal
+            handleClose={() => {
+              setModalOpen(false);
+            }}
+          />,
+          document.body
+        )}
     </div>
   );
 };
