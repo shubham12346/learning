@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useToaster } from "./toastSystemDesign/ToastContext";
 
 const SearchAndDebounce = () => {
   const [users, setUsers] = useState([]);
@@ -6,6 +7,8 @@ const SearchAndDebounce = () => {
   const [throttle, setThrottle] = useState(0);
   const debounced = useRef<any>(null);
   const countRef = useRef(0);
+
+  const { addToaster } = useToaster();
 
   useEffect(() => {
     if (debounced.current) {
@@ -33,6 +36,10 @@ const SearchAndDebounce = () => {
     }, 1000);
   };
 
+  const handleToaster = () => {
+    addToaster("Added toaster succesfully", "success`");
+  };
+
   return (
     <div className="text-white">
       SearchAndDebounce
@@ -56,6 +63,9 @@ const SearchAndDebounce = () => {
         }}
       >
         click Ref
+      </button>
+      <button className="m-20 cursor-pointer border-2 " onClick={handleToaster}>
+        Add Toaster
       </button>
     </div>
   );

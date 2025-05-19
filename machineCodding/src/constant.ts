@@ -41,4 +41,10 @@ export const components = [
     algorithm: "initial",
     route: "/carasoul",
   },
+  {
+    id: 8,
+    title: "Toast System Design",
+    algorithm: "",
+    route: "/toast",
+  },
 ];
