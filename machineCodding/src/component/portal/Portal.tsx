@@ -14,7 +14,9 @@ const Portal = ({ handleClose }) => {
     >
       Portal
       <div>
-        <button onClick={handleClose}>close </button>
+        <button onClick={handleClose} className="cursor-pointer">
+          close{" "}
+        </button>
       </div>
     </div>
   );
