@@ -47,4 +47,10 @@ export const components = [
     algorithm: "",
     route: "/toast",
   },
+  {
+    id: 9,
+    title: "Otp Component",
+    algorithm: "",
+    route: "/Otp",
+  },
 ];

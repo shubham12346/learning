@@ -10,6 +10,7 @@ import BreadCrumb from "./component/BreadCrumb";
 import useScreenType from "./hooks/useScreenType";
 import ResponsiveCard from "./component/ResponsiveCard";
 import { ToastProvider } from "./component/toastSystemDesign/ToastContext";
+import OtpComponent from "./component/OtpComponent";
 function App() {
   const { screenType } = useScreenType();
   console.log("screenType", screenType);
@@ -39,6 +40,7 @@ function App() {
               path={`${components[6].route}`}
               element={<ResponsiveCard />}
             />
+            <Route path={`${components[8].route}`} element={<OtpComponent />} />
           </Routes>
         </BrowserRouter>
       </div>
