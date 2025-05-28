@@ -11,6 +11,7 @@ import useScreenType from "./hooks/useScreenType";
 import ResponsiveCard from "./component/ResponsiveCard";
 import { ToastProvider } from "./component/toastSystemDesign/ToastContext";
 import OtpComponent from "./component/OtpComponent";
+import CircleWithCursor from "./component/CircleWithCursor";
 function App() {
   const { screenType } = useScreenType();
   console.log("screenType", screenType);
@@ -41,6 +42,10 @@ function App() {
               element={<ResponsiveCard />}
             />
             <Route path={`${components[8].route}`} element={<OtpComponent />} />
+            <Route
+              path={`${components[9].route}`}
+              element={<CircleWithCursor />}
+            />
           </Routes>
         </BrowserRouter>
       </div>

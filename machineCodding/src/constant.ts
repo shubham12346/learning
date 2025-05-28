@@ -53,4 +53,10 @@ export const components = [
     algorithm: "",
     route: "/Otp",
   },
+  {
+    id: 10,
+    title: "CircleWithCursor",
+    algorithm: "",
+    route: "/circleCursor",
+  },
 ];
