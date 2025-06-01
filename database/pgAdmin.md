@@ -133,4 +133,74 @@ create table employee (
 2. Sum
 3. Avg
 4. Min
-5. Max
+5. Max \* select avg(salary) from employees ;
+
+# Group By
+
+# string function
+
+1. concat ,concat_ws
+   test01=# select concat(fname,lname) from employees ;
+   concat
+
+---
+
+shubhamagrahari
+rajsharma
+priyasingh
+arjunverma
+mandeepdangar
+vaibhavmishra
+(6 rows)
+
+test01=# select concat(fname,lname) as FullName from employees;
+fullname
+
+---
+
+shubhamagrahari
+rajsharma
+priyasingh
+arjunverma
+mandeepdangar
+vaibhavmishra
+(6 rows)
+
+         select emp_id, concat(fname,lname) as FullName,dept from employees ;
+
+emp_id | fullname | dept
+--------+-----------------+-----------
+1 | shubhamagrahari | it
+3 | rajsharma | hr
+4 | priyasingh | finance
+5 | arjunverma | marketing
+6 | mandeepdangar | it
+7 | vaibhavmishra | it
+
+test01=# select concat_ws('-',fname,lname) as fullName ,dept from employees ;
+fullname | dept
+------------------+-----------
+shubham-agrahari | it
+raj-sharma | hr
+priya-singh | finance
+arjun-verma | marketing
+mandeep-dangar | it
+vaibhav-mishra | it
+
+2.  substr
+
+- suppose there is phone nmber column which has different country codes ,a nd you need to fetch all the country codes , then it can be useful
+
+3.  left , right
+
+4.  length
+
+5.  upper , lower
+
+6.  trim , ltrim ,rtrim
+
+7.  replace
+
+8.  position
+
+9.  string_agg
