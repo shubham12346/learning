@@ -12,6 +12,7 @@ import ResponsiveCard from "./component/ResponsiveCard";
 import { ToastProvider } from "./component/toastSystemDesign/ToastContext";
 import OtpComponent from "./component/OtpComponent";
 import CircleWithCursor from "./component/CircleWithCursor";
+import AnimationHooks from "./component/AnimationHooks";
 function App() {
   const { screenType } = useScreenType();
   console.log("screenType", screenType);
@@ -45,6 +46,10 @@ function App() {
             <Route
               path={`${components[9].route}`}
               element={<CircleWithCursor />}
+            />
+            <Route
+              path={`${components[10].route}`}
+              element={<AnimationHooks />}
             />
           </Routes>
         </BrowserRouter>

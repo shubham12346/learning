@@ -59,4 +59,10 @@ export const components = [
     algorithm: "",
     route: "/circleCursor",
   },
+  {
+    id: 11,
+    title: "AnimationHooks",
+    algorithm: "",
+    route: "/animationHooks",
+  },
 ];
