@@ -65,4 +65,10 @@ export const components = [
     algorithm: "",
     route: "/animationHooks",
   },
+  {
+    id: 12,
+    title: "Load More",
+    algorithm: "",
+    route: "/loadmore",
+  },
 ];

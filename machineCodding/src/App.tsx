@@ -7,15 +7,14 @@ import Header from "./component/Header";
 import ProgressBar from "./component/ProgressBar";
 import SearchAndDebounce from "./component/SearchAndDebounce";
 import BreadCrumb from "./component/BreadCrumb";
-import useScreenType from "./hooks/useScreenType";
 import ResponsiveCard from "./component/ResponsiveCard";
 import { ToastProvider } from "./component/toastSystemDesign/ToastContext";
 import OtpComponent from "./component/OtpComponent";
 import CircleWithCursor from "./component/CircleWithCursor";
 import AnimationHooks from "./component/AnimationHooks";
+import LoadMoreWithPagination from "./component/paginationWithYield/LoadMoreWithPagination";
 function App() {
-  const { screenType } = useScreenType();
-  console.log("screenType", screenType);
+  console.log("components[11].route", components[10].route);
   return (
     <ToastProvider>
       <div className="bg-gray-700 min-h-screen  h-[100%] px-5 py-5 ">
@@ -50,6 +49,10 @@ function App() {
             <Route
               path={`${components[10].route}`}
               element={<AnimationHooks />}
+            />
+            <Route
+              path={`${components[11].route}`}
+              element={<LoadMoreWithPagination />}
             />
           </Routes>
         </BrowserRouter>
