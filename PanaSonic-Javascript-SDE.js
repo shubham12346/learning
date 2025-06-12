@@ -32,8 +32,46 @@ function* numberGenerator() {
   yield 3;
 }
 const gen = numberGenerator();
-console.log("next", gen.next());
-console.log("next", gen.next());
+console.log("next", gen.next().value);
+console.log("next", gen.next().value);
+
+function* rangeGnerator() {
+  let batches = [];
+
+  for (let i = 1; i <= 10; i++) {
+    batches.push(i);
+    if (batches.length === 3 || i === 10) {
+      yield batches;
+      batches = [];
+    }
+  }
+}
+
+const numG = rangeGnerator();
+console.log("numG", numG.next().value);
+console.log("numG", numG.next().value);
+
+console.log("numG", numG.next().value);
+console.log("numG", numG.next().value);
+console.log("numG", numG.next().done);
+
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const pageSize = 3;
+
+function* paginate(data, pageSize) {
+  for (let i = 0; i < data.length; i += pageSize) {
+    yield data.slice(i, i + pageSize);
+  }
+}
+const paginator = paginate(items, pageSize);
+
+console.log(paginator.next().value); // [1, 2, 3]
+console.log(paginator.next().value); // [4, 5, 6]
+console.log(paginator.next().value); // [7, 8, 9]
+console.log(paginator.next().value); // [10]
+console.log(paginator.next().done); // true
+
+// -- Real world use case : API Pagination simulated
 
 // : Explain what hoisting is in JavaScript and provide an example demonstrating its behavior. What are
 // the implications for code readability and maintainability?

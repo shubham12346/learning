@@ -4,6 +4,14 @@ import { allItems, paginate, allMyItems, paginateStar } from "./Paginate";
 const LoadMoreWithPagination = () => {
   const [visibleItems, setVisibleItems] = useState([]);
   const [allVisibleItems, setAllVisibleItems] = useState([]);
+  const [text, setText] = useState(["hi", "i", "am", "shubham"]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextfn = () => {
+    setCurrentIndex((index) => index + 1);
+  };
+
+  console.log("currentIndex", currentIndex);
   const generatorRef = useRef(paginate(allItems, 5)); // 5 items per page
 
   const genRef = useRef(paginateStar(allItems, 10));
@@ -54,6 +62,30 @@ const LoadMoreWithPagination = () => {
         >
           Load More
         </button>
+      </div>
+      <div className="App">
+        <div
+          style={{
+            border: "2px solid white",
+            width: "400px",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              width: "200px",
+              transform: `translateX(-${currentIndex * 400}px)`,
+            }}
+          >
+            {text?.map((item, index) => (
+              <div key={index} style={{ width: "400px", flexShrink: 0 }}>
+                {item}{" "}
+              </div>
+            ))}
+          </div>
+        </div>
+        <button onClick={nextfn}>next</button>
       </div>
     </div>
   );

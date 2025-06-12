@@ -12,7 +12,7 @@ import { ToastProvider } from "./component/toastSystemDesign/ToastContext";
 import OtpComponent from "./component/OtpComponent";
 import CircleWithCursor from "./component/CircleWithCursor";
 import AnimationHooks from "./component/AnimationHooks";
-import LoadMoreWithPagination from "./component/paginationWithYield/LoadMoreWithPagination";
+import LoadMoreWithPagination from "./component/Panasonics/LoadMoreWithPagination";
 function App() {
   console.log("components[11].route", components[10].route);
   return (
