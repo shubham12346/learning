@@ -36,10 +36,10 @@ function helperFunction(fails = 1) {
   };
 }
 
-console.log("Test 1: Should succeed immediately");
-const fn1 = helperFunction(2);
-const result1 = await retryPromise(fn1);
-console.log("Success:", result1);
+// console.log("Test 1: Should succeed immediately");
+// const fn1 = helperFunction(2);
+// const result1 = await retryPromise(fn1);
+// console.log("Success:", result1);
 
 // mimic js promise method
 
@@ -120,3 +120,16 @@ class MyPromise {
     return this.then(null, onRejected);
   }
 }
+
+function log() {
+  setTimeout(() => {
+    console.log("hello");
+    return 5;
+  }, 2000);
+}
+new MyPromise((resolve) => {
+  setTimeout(() => {
+    console.log("3 sec");
+    resolve(4);
+  }, 3000);
+}).then((res) => console.log("res", res));
