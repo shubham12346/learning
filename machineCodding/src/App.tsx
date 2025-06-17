@@ -13,6 +13,7 @@ import OtpComponent from "./component/OtpComponent";
 import CircleWithCursor from "./component/CircleWithCursor";
 import AnimationHooks from "./component/AnimationHooks";
 import LoadMoreWithPagination from "./component/Panasonics/LoadMoreWithPagination";
+import Index from "./component/coditas/Index";
 function App() {
   console.log("components[11].route", components[10].route);
   return (
@@ -54,6 +55,7 @@ function App() {
               path={`${components[11].route}`}
               element={<LoadMoreWithPagination />}
             />
+            <Route path={`${components[12].route}`} element={<Index />} />
           </Routes>
         </BrowserRouter>
       </div>

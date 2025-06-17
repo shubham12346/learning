@@ -69,6 +69,12 @@ export const components = [
     id: 12,
     title: "Load More",
     algorithm: "",
-    route: "/loadmore",
+    route: "/loadmorewww",
+  },
+  {
+    id: 13,
+    title: "Coditas",
+    algorithm: "",
+    route: "/coditas",
   },
 ];
