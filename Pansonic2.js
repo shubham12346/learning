@@ -36,100 +36,100 @@ function helperFunction(fails = 1) {
   };
 }
 
-// console.log("Test 1: Should succeed immediately");
-// const fn1 = helperFunction(2);
-// const result1 = await retryPromise(fn1);
-// console.log("Success:", result1);
+console.log("Test 1: Should succeed immediately");
+const fn1 = helperFunction(2);
+const result1 = await retryPromise(fn1);
+console.log("Success:", result1);
 
 // mimic js promise method
 
-class MyPromise {
-  constructor(fn) {
-    this.value = null;
-    this.reason = null;
-    this.state = "pending";
-    this.onFullfilledCalbacks = [];
-    this.onRejectCallbacks = [];
+// class MyPromise {
+//   constructor(fn) {
+//     this.value = null;
+//     this.reason = null;
+//     this.state = "pending";
+//     this.onFullfilledCalbacks = [];
+//     this.onRejectCallbacks = [];
 
-    const reject = (val) => {
-      if (this.state === "pending") {
-        this.state = "rejected";
-        this.reason = val;
-        this.onRejectCallbacks?.forEach((callback) => callback(val));
-      }
-    };
+//     const reject = (val) => {
+//       if (this.state === "pending") {
+//         this.state = "rejected";
+//         this.reason = val;
+//         this.onRejectCallbacks?.forEach((callback) => callback(val));
+//       }
+//     };
 
-    const resolve = (val) => {
-      if (this.state === "pending") {
-        this.state = "fullfilled";
-        this.value = val;
-        this.onFullfilledCalbacks?.forEach((callback) => callback(val));
-      }
-    };
+//     const resolve = (val) => {
+//       if (this.state === "pending") {
+//         this.state = "fullfilled";
+//         this.value = val;
+//         this.onFullfilledCalbacks?.forEach((callback) => callback(val));
+//       }
+//     };
 
-    try {
-      fn(resolve, reject);
-    } catch (err) {
-      reject(err);
-    }
-  }
+//     try {
+//       fn(resolve, reject);
+//     } catch (err) {
+//       reject(err);
+//     }
+//   }
 
-  then(onFullfilled, onRejected) {
-    return new MyPromise((resolve, reject) => {
-      const handleFullfilled = (value) => {
-        try {
-          if (typeof onFullfilled === "function") {
-            resolve(onFullfilled(value));
-          } else {
-            resolve(value);
-          }
-        } catch (err) {
-          reject(err);
-        }
-      };
+//   then(onFullfilled, onRejected) {
+//     return new MyPromise((resolve, reject) => {
+//       const handleFullfilled = (value) => {
+//         try {
+//           if (typeof onFullfilled === "function") {
+//             resolve(onFullfilled(value));
+//           } else {
+//             resolve(value);
+//           }
+//         } catch (err) {
+//           reject(err);
+//         }
+//       };
 
-      const handleRejected = (reason) => {
-        try {
-          if (typeof onRejected === "function") {
-            reject(onRejected(reason));
-          } else {
-            reject(reason);
-          }
-        } catch (err) {
-          reject(err);
-        }
-      };
+//       const handleRejected = (reason) => {
+//         try {
+//           if (typeof onRejected === "function") {
+//             reject(onRejected(reason));
+//           } else {
+//             reject(reason);
+//           }
+//         } catch (err) {
+//           reject(err);
+//         }
+//       };
 
-      if (this.state === "fullfilled") {
-        setTimeout(() => handleFullfilled(this.value), 0);
-      } else if (this.state === "rejected") {
-        setTimeout(() => handleRejected(this.reason), 0);
-      } else {
-        this.onFullfilledCalbacks.push((value) => {
-          setTimeout(() => handleFullfilled(this.value), 0);
-        });
+//       if (this.state === "fullfilled") {
+//         setTimeout(() => handleFullfilled(this.value), 0);
+//       } else if (this.state === "rejected") {
+//         setTimeout(() => handleRejected(this.reason), 0);
+//       } else {
+//         this.onFullfilledCalbacks.push((value) => {
+//           setTimeout(() => handleFullfilled(this.value), 0);
+//         });
 
-        this.onRejectCallbacks.push((value) => {
-          setTimeout(() => handleRejected(this.value), 0);
-        });
-      }
-    });
-  }
+//         this.onRejectCallbacks.push((value) => {
+//           setTimeout(() => handleRejected(this.value), 0);
+//         });
+//       }
+//     });
+//   }
 
-  catch(onRejected) {
-    return this.then(null, onRejected);
-  }
-}
+//   catch(onRejected) {
+//     return this.then(null, onRejected);
+//   }
+// }
 
-function log() {
-  setTimeout(() => {
-    console.log("hello");
-    return 5;
-  }, 2000);
-}
-new MyPromise((resolve) => {
-  setTimeout(() => {
-    console.log("3 sec");
-    resolve(4);
-  }, 3000);
-}).then((res) => console.log("res", res));
+// function log() {
+//   setTimeout(() => {
+//     console.log("hello");
+//     return 5;
+//   }, 2000);
+// }
+// new MyPromise((resolve) => {
+//   setTimeout(() => {
+//     console.log("3 sec");
+//     resolve(4);
+//   }, 3000);
+// }).then((res) => console.log("res", res));

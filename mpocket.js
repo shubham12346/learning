@@ -67,14 +67,26 @@ function square(num) {
   return num * num;
 }
 
-const sumMemoized = memoize(square);
-sumMemoized(5);
-sumMemoized(5);
-sumMemoized(5);
+function count() {
+  let count = 0;
+  return function () {
+    console.log("count", count);
+    count++;
+  };
+}
+cou = count();
+cou();
+cou();
+cou();
 
-// suppose you have flex property if you have one div to to take some width and reaining to other
+// const sumMemoized = memoize(square);
+// sumMemoized(5);
+// sumMemoized(5);
+// sumMemoized(5);
 
-<div className="flex">
-  <div>1</div>
-  <div>2</div>
-</div>;
+// // suppose you have flex property if you have one div to to take some width and reaining to other
+
+// <div className="flex">
+//   <div>1</div>
+//   <div>2</div>
+// </div>;

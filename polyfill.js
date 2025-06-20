@@ -50,13 +50,23 @@ SavingAccount.prototype.addInterest = function () {
   );
 };
 
-const acc1 = new BankAccount("shubham", 3000);
-acc1.deposit(2000);
-acc1.withDraw(1000);
-acc1.getBalance();
+// const acc1 = new BankAccount("shubham", 3000);
+// acc1.deposit(2000);
+// acc1.withDraw(1000);
+// acc1.getBalance();
 
-const sav1 = new SavingAccount("shubham", 5000, 0.12);
-sav1.deposit(2000);
-sav1.getBalance();
-sav1.addInterest(0.15);
-sav1.getBalance();
+// const sav1 = new SavingAccount("shubham", 5000, 0.12);
+// sav1.deposit(2000);
+// sav1.getBalance();
+// sav1.addInterest(0.15);
+// sav1.getBalance();
+
+if (!Function.prototype.bind) {
+  Function.prototype.bind = function (context, ...args) {
+    console.log(typeof args);
+    const fn = this;
+    return function (...args) {
+      return fn.apply(context, args.concat(args2));
+    };
+  };
+}
