@@ -70,3 +70,14 @@ if (!Function.prototype.bind) {
     };
   };
 }
+
+// if (!Array.prototype.includes) {
+Array.prototype.includes = function (args) {
+  console.log("args", args);
+  console.log("index", this.indexOf(args));
+  return this.indexOf(args) !== -1;
+};
+// }
+let ans = ["a", "b", "c"];
+let c = "d";
+console.log("ans", ans.includes("c"));
